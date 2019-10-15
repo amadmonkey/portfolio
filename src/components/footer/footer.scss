@@ -1,0 +1,60 @@
+@import "../../Variables.scss";
+
+.footer { 
+    position: relative;
+    padding-top: 200px;
+    height: 500px;
+    text-align: center;
+    font-family: 'Montserrat-SemiBold', sans-serif;
+    font-size: 17px;
+    letter-spacing: 4px;
+    > div {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        p {
+            margin: 100px auto;
+        }
+    }
+    .quick-links {
+        color: $primary;
+        display: flex;
+        justify-content: space-around;
+        width: 600px;
+        margin: 0 auto;
+        li {
+            position: relative;
+            a {
+                cursor: pointer;
+                @include transition(0.5s);
+                &:hover {
+                    color: $secondary-light;
+                }
+            }
+            &:not(:last-child) {
+                &::after {
+                    content: '|';
+                    position: absolute;
+                    right: -40px;
+                    top: -1px;
+                }
+            }
+        }
+    }
+
+    .bar-left {
+        position: absolute;
+        height: 500px;
+        left: -300px;
+        top: 200px;
+    }
+
+    .bar-right {
+        position: absolute;
+        height: 500px;
+        bottom: 0;
+        right: -300px;
+        transform: rotate(40deg);
+    }
+}

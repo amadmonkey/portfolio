@@ -1,0 +1,97 @@
+@import "../../Variables.scss";
+
+.skill-item {
+    position: relative;
+    display: inline-block;
+    max-width: 420px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
+    color: $secondary-light;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    &:nth-of-type(odd) {
+        margin-right: 80px;
+    }
+    > * {
+        display: inline-block;
+    }
+    .title {
+        line-height: 1.4;
+    }
+    .skill-rate-container {
+        position: absolute;
+        right: 0;
+        .skill-rate {
+            margin-left: 15px;
+            display: inline-block;
+            animation: 2s linear point-down;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+.skill-rate {
+    svg {
+        g {
+            path {
+                stroke: #adadad;
+                fill: none;
+            }
+        }
+    }
+    &.active {
+        &:nth-child(1) {
+            svg {
+                g {
+                    path {
+                        stroke: $rate-1;
+                        fill: $rate-1
+                    }
+                }
+            }
+        }
+        &:nth-child(2) {
+            svg {
+                g {
+                    path {
+                        stroke: $rate-2;
+                        fill: $rate-2;
+                    }
+                }
+            }
+        }
+        &:nth-child(3) {
+            svg {
+                g {
+                    path {
+                        stroke: $rate-3;
+                        fill: $rate-3;
+                    }
+                }
+            }
+        }
+        &:nth-child(4) {
+            svg {
+                g {
+                    path {
+                        stroke: $rate-4;
+                        fill: $rate-4;
+                    }
+                }
+            }
+        }
+        &:nth-child(5) {
+            svg {
+                g {
+                    path {
+                        stroke: $rate-5;
+                        fill: $rate-5;
+                    }
+                }
+            }
+        }
+    }
+}

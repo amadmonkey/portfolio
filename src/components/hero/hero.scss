@@ -1,0 +1,97 @@
+@import "../../Variables.scss";
+
+.hero {
+    min-height: 700px;
+    height: 100%;
+    padding-top: 200px;
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -102px;
+        height: 200px;
+        width: 100%;
+        @include transition(1s ease-in-out);
+    }
+
+    &::before {
+        left: -500px;
+        background-color: $primary;
+        transform: skewY(3deg);
+    }
+
+    &::after {
+        background-color: $secondary-dark;
+        transform: skewY(-3deg);
+    }
+
+    &.unfocused {
+        &::before,
+        &::after {
+            transform: skewY(0deg);
+        }
+    }
+
+    .logo-container {
+        position: relative;
+        width: 200px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        .logo {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        &::before,
+        &::after {
+            content: '';
+            z-index: 0;
+            position: absolute;
+            height: 51px;
+            width: 250px;
+            border-radius: 50px;
+            box-shadow: -3px 3px 3px #0000007a;
+        }
+        &::before {
+            top: 73px;
+            left: -10px;
+            background-color: $secondary;
+            transform: rotate(-30deg) translateY(-50%);
+        }
+        &::after {
+            top: 146px;
+            left: -35px;
+            background-color: $primary;
+            transform: rotate(-30deg) translateY(-50%);
+        }
+    }
+    
+    .hero-description {
+        text-align: center;
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+        h1 {
+            font-family: 'CarbonBlock', sans-serif;
+            font-size: 85px;
+            .capitalize {
+                font-size: calc(100% + 20px);
+            }
+            color: $primary;
+            line-height: 90px;
+        }
+        h2 {
+            font-size: 27px;
+        }
+        p {
+            width: 300px;
+            margin: 0 auto;
+            line-height: 2;
+        }
+    }
+}

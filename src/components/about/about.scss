@@ -1,0 +1,179 @@
+@import "../../Variables.scss";
+
+.about {
+    position: relative;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $secondary-dark;
+    color: $teal;
+    font-family: 'Montserrat-Light', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    
+    .about-content {
+        padding: 20px;
+        p {
+            margin: 40px 0;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -102px;
+        width: 100%;
+        height: 200px;
+        z-index: -1;
+        @include transition(0.2s ease-in-out);
+    }
+    &::before {
+        right: -500px;
+        background-color: $primary;
+        transform: skewY(3deg);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -102px;
+        width: 100%;
+        height: 200px;
+        left: 0;
+        background-color: $secondary-dark;
+        transform: skewY(-3deg);
+    }
+
+
+    .about-container {
+        display: flex;
+        justify-content: space-between;
+        > div {
+            width: 45%;
+        }
+        .about-item {
+            header {
+                height: 40px;
+                border-radius: 20px;
+                background-color: $secondary-light;
+                padding: 0px 20px;
+                font-size: 20px;
+                line-height: 2.1;
+                font-weight: medium;
+                letter-spacing: 5px;
+                box-shadow: 0 5px 5px #0000001f;
+                color: $primary;
+                font-family: 'Montserrat', sans-serif;
+            }
+            .about-item-content {
+                padding: 20px;
+                .experience-item {
+                    position: relative;
+                    padding: 15px;
+                    padding-left: 50px;
+                    > h1 {
+                        font-family: 'Montserrat-SemiBold', sans-serif;
+                        font-size: 16px;
+                        color: $primary;
+                    }
+                    > h2 {
+                        color: $primary;
+                        > * {
+                            display: inline-block;
+                        }
+                        span {
+                            &:nth-child(2) {
+                                vertical-align: super;
+                            }
+                        }
+                    }
+                    .position {
+                        display: block;
+                        margin-top: 10px;
+                        font-style: italic;
+                    }
+                    .dates {
+                        display: block;
+                    }
+                    .tools-header {
+                        display: block;
+                        margin-top: 10px;
+                    }
+                    ul {
+                        list-style-type: disc;
+                        padding-left: 30px;
+                    }
+                    &:not(:last-child) {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 0px;
+                            height: 100%;
+                            left: 19px;
+                            top: 30px;
+                            border-left: 3px dashed $teal;
+                        }
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 10px;
+                        left: 4px;
+                        height: 25px;
+                        width: 25px;
+                        border-radius: 50%;
+                        background-color: #7BBAEB;
+                        border: 4px solid #3A7BAC;
+                    }
+                }
+                h1 {
+                    font-family: 'Montserrat-SemiBold', sans-serif;
+                    color: $primary;
+                }
+                ul {
+                    list-style-type: disc;
+                    padding-left: 30px;
+                    li {
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.btn-call {
+    background-color: #FF3939;
+    > span {
+        vertical-align: super;
+    }
+    .phone-icon {
+        height: 30px;
+    }
+}
+
+.btn-download {
+    background-color: $secondary-light;
+    > span {
+        vertical-align: super;
+    }
+    .download-icon {
+        height: 30px;
+    }
+}
+
+.btn-email {
+    > span {
+        vertical-align: super;
+    }
+    .email-icon {
+        height: 30px;
+    }
+}

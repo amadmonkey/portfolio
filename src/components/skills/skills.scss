@@ -1,0 +1,55 @@
+@import "../../Variables.scss";
+
+.skills {
+    position: relative;
+    max-height: 1000px;
+    margin-top: 200px;
+    padding-top: 200px;
+    padding-bottom: 400px;
+    text-align: center;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -100px;
+        height: 200px;
+        @include transition(1s ease-in-out);
+    }
+
+    &::before {
+        left: 500px;
+        width: 100%;
+        background-color: #FF9329;
+        transform: skewY(-3deg);
+    }
+
+    &::after {
+        width: 100%;
+        background-color: $secondary-dark;
+        transform: skewY(3deg);
+        left: 0;
+    }
+
+    &.unfocused {
+        &::before,
+        &::after {
+            transform: skewY(0deg);
+        }
+    }
+
+    .html {
+        position: absolute;
+        top: 0px;
+        left: -70px;
+        z-index: -1;
+    }
+
+    .braces {
+        position: absolute;
+        bottom: 120px;
+        right: -40px;
+        z-index: -1;
+    }
+
+}

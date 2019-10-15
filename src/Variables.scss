@@ -1,0 +1,86 @@
+// fonts
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url(./fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url(./fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'CarbonBlock';
+    src: url(./fonts/CarbonBlock.ttf);
+}
+
+// theme
+$teal: #C6EFEE;
+$primary: #FF9329;
+$secondary: #550F53;
+$secondary-light: #811E7E;
+$secondary-dark: #550F53; // override
+$secondary-dark: #340932;
+// lighter
+$rate-1: #45ef73;
+$rate-2: #b0ef39;
+$rate-3: #e4f121;
+$rate-4: #ffc772;
+$rate-5: #f38d8d;
+// darker
+$rate-1: #40d669;
+$rate-2: #a4e033;
+$rate-3: #c9d41f;
+$rate-4: #eab35e;
+$rate-5: #d47373;
+
+a, a:link, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@function stroke($stroke, $color) {
+    $shadow: ();
+    $from: $stroke*-1;
+    @for $i from $from through $stroke {
+     @for $j from $from through $stroke {
+        $shadow: append($shadow, $i*1px $j*1px 0 $color, comma);
+      }
+    }
+    @return $shadow;
+}
+
+@mixin stroke($stroke, $color) {
+    text-shadow: stroke($stroke, $color);
+}
+
+@keyframes point-down {
+    0% {
+        bottom: 7px;
+    }
+    15% {
+        bottom: 12px;
+    }
+    20% {
+        bottom: 7px;
+    }
+    25% {
+        bottom: 12px;
+    }
+    30% {
+        bottom: 7px;
+    }
+}

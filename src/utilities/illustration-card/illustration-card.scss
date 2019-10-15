@@ -1,0 +1,37 @@
+@import "../../Variables.scss";
+
+.illustration-card {
+    display: inline-block;
+    width: 265px;
+    height: 265px;
+    overflow: hidden;
+    border: 10px solid $secondary-light;
+    margin: 10px;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    top: 30px;
+    opacity: 0;
+    cursor: pointer;
+    background-color: $secondary-dark;
+    @include transition(0.5s ease-out);
+    &.portrait {
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+    &.landscape {
+        img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &:hover {
+        border: 10px solid $primary;
+        background-color: #230121;
+    }
+}

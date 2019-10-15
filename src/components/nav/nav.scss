@@ -1,0 +1,92 @@
+@import "../../Variables.scss";
+
+nav {
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    background-color: transparent;
+    box-shadow: 0 10px 10px transparent;
+    @include stroke(2, $teal);
+    z-index: 3;
+    @include transition(opacity 0.5s ease-in-out);
+    ul {
+        list-style-type: none;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        li {
+            display: inline-block;
+            font-size: 30px;
+            position: relative;
+            width: 330px;
+            text-align: center;
+            color: $secondary-dark;
+            a {
+                z-index: 2;
+                position: relative;
+                @include transition(0.5s);
+            }
+            span {
+                position: relative;
+                @include transition(color 0.5s ease-in-out);
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 20px;
+                    width: 0;
+                    z-index: 1;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 3px #0000007a;
+                    @include transition(0.5s ease-in-out);
+                }
+                &::before {
+                    top: 0px;
+                    left: -20px;
+                    background-color: $secondary-light;
+                }
+                &::after {
+                    top: 20px;
+                    right: -20px;
+                    background-color: $primary;
+                }
+                &.active,
+                &:hover {
+                    a {
+                        color: $teal;
+                        text-shadow: none;
+                    }
+                    &::before,
+                    &::after {
+                        width: calc(100% + 55px);
+                    }
+                }
+            }
+        }
+    }
+    &.light {
+        // background-color: $secondary-dark;
+        // box-shadow: 0 10px 10px $secondary-dark;
+        ul {
+            li {
+                a {
+                    color: $teal;
+                    @include transition(0.5s);
+                    @include stroke(2, $secondary-dark);
+                }
+            }
+        }
+    }
+    &.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
