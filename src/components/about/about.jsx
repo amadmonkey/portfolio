@@ -123,9 +123,9 @@ function About() {
                         <div className="about-item">
                             <header>Hire Me (please?)</header>
                             <div className="about-item-content">
-                                <button className="btn-lg btn-call"><Phone className="phone-icon" /> <span>DOWNLOAD DOC</span></button>
-                                <button className="btn-lg btn-download"><Download className="download-icon" /> <span>CALL ME</span></button>
-                                <button className="btn-lg btn-email"><Email className="email-icon" /> <span>SEND ME AN EMAIL</span></button>
+                                <button className="btn-lg btn-call"><a href="#"><Phone className="phone-icon" /> <span>DOWNLOAD DOC</span></a></button>
+                                <button className="btn-lg btn-download"><a href="tel:916-552-3960"><Download className="download-icon" /> <span>09165523960</span></a></button>
+                                <button className="btn-lg btn-email"><a href="mailto:aquinoarcie@gmail.com"><Email className="email-icon" /> <span>SEND ME AN EMAIL</span></a></button>
                             </div>
                         </div>
                     </div>

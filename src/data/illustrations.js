@@ -1,5 +1,5 @@
 class Illustration {
-    basePath = '/illustrations/';
+    basePath = '/portfolio/illustrations/';
     constructor({ title = "", desc = "", isPortrait = true, imgName = "" }) {
         this.title = title;
         this.desc = desc;

@@ -151,8 +151,10 @@
 
 .btn-call {
     background-color: #FF3939;
-    > span {
-        vertical-align: super;
+    > a {
+        > span {
+            vertical-align: super;
+        }
     }
     .phone-icon {
         height: 30px;
@@ -161,8 +163,10 @@
 
 .btn-download {
     background-color: $secondary-light;
-    > span {
-        vertical-align: super;
+    > a {
+        > span {
+            vertical-align: super;
+        }
     }
     .download-icon {
         height: 30px;
@@ -170,8 +174,10 @@
 }
 
 .btn-email {
-    > span {
-        vertical-align: super;
+    > a {
+        > span {
+            vertical-align: super;
+        }
     }
     .email-icon {
         height: 30px;

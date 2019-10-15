@@ -13,7 +13,7 @@ function Footer() {
                             return <li key={index}><a id={value.id} className={value.id} href="#">{value.title}</a></li>
                         })}
                     </ul>
-                    <p>Made with React<br /><br />and<br /><br />Google Fonts</p>
+                    <p>Made with React JS<br /><br />and<br /><br />Google Fonts</p>
                     <span>© 2019 Arcie Aquino. All rights reserved.</span>
                 </div>
             </div>
