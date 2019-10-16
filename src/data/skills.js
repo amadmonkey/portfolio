@@ -28,7 +28,7 @@ export default {
             rate: 3
         }),
         new Skill({
-            title: "Java / Spring Boot",
+            title: "Java/Spring Boot",
             rate: 3
         }),
         new Skill({
