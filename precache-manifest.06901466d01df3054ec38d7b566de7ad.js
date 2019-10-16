@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "607bebba98b1e7baca3a664979e5108b",
+    "revision": "875b7b68314a5630bc978f53038dd7b3",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "49f9e488fbc7edb345e5",
-    "url": "/portfolio/static/css/main.927fefe7.chunk.css"
+    "revision": "66160480426fe60c7cbd",
+    "url": "/portfolio/static/css/main.1ca692d5.chunk.css"
   },
   {
     "revision": "9f9170465d457b562386",
     "url": "/portfolio/static/js/2.638d8c9b.chunk.js"
   },
   {
-    "revision": "49f9e488fbc7edb345e5",
-    "url": "/portfolio/static/js/main.6e1aaa21.chunk.js"
+    "revision": "66160480426fe60c7cbd",
+    "url": "/portfolio/static/js/main.dc47255b.chunk.js"
   },
   {
     "revision": "791f997dc0acbb20fb93",
@@ -34,10 +34,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c641dbee1d75892e4d88bdc31560c91b",
     "url": "/portfolio/static/media/Montserrat-SemiBold.c641dbee.ttf"
-  },
-  {
-    "revision": "bcabafa3de53cc681d988acccf6e099b",
-    "url": "/portfolio/static/media/bars.bcabafa3.svg"
   },
   {
     "revision": "bd99bf52a33c8fa4bc7017f2da5a97d5",
