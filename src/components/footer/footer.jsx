@@ -8,7 +8,7 @@ function Footer() {
             <div className="content">
                 <ul className="quick-links">
                     {NavList.nav.map((value, index) => {
-                        return <li key={index}><a id={value.id} className={value.id} href="#">{value.title}</a></li>
+                        return <li key={index}><a id={value.id} className={value.id}>{value.title}</a></li>
                     })}
                 </ul>
                 <p>Made with <a href="https://reactjs.org/" target="_blank" class="link">React JS</a><br /><br /><a href="https://sass-lang.com/" target="_blank" class="link">SASS</a><br /><br />and <a href="https://fonts.google.com/" target=" _blank" class="link">Google Fonts</a></p>
