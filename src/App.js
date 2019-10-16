@@ -129,6 +129,10 @@ function App() {
 	// Apply event handlers. Example of firing the scrolling mechanism.
 	document.addEventListener('click', ifNav.bind(null, 1000))
 
+	// remove clip paths if internet explorer
+	var ua = window.navigator.userAgent;
+	var msie = ua.indexOf("MSIE ");
+
 	return (
 		<div className="app">
 			<Nav></Nav>
