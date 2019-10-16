@@ -26,6 +26,7 @@ $secondary: #550F53;
 $secondary-light: #811E7E;
 $secondary-dark: #550F53; // override
 $secondary-dark: #340932;
+$danger: #FF3939;
 // lighter
 $rate-1: #45ef73;
 $rate-2: #b0ef39;
@@ -38,6 +39,62 @@ $rate-2: #a4e033;
 $rate-3: #c9d41f;
 $rate-4: #eab35e;
 $rate-5: #d47373;
+// mono
+$rate-1: #c9d41f;
+$rate-2: #c9d41f;
+$rate-3: #c9d41f;
+$rate-4: #c9d41f;
+$rate-5: #c9d41f;
+
+$xl: 1180px;
+$lg: 960px;
+$md: 880px;
+$mdAbout: 680px;
+$sm: 480px;
+$smNav: 420px;
+$xs: 320px;
+
+@mixin xLarge {
+    @media (max-width: #{$xl}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (max-width: #{$lg}) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (max-width: #{$md}) {
+        @content;
+    }
+}
+
+@mixin mdAbout {
+    @media (max-width: #{$mdAbout}) {
+        @content;
+    }
+}
+
+@mixin smNav {
+    @media (max-width: #{$smNav}) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media (max-width: #{$sm}) {
+        @content;
+    }
+}
+
+@mixin xsmall {
+    @media (max-width: #{$xs}) {
+        @content;
+    }
+}
 
 a, a:link, a:visited, a:hover, a:active {
     color: inherit;
@@ -56,9 +113,9 @@ a, a:link, a:visited, a:hover, a:active {
     $shadow: ();
     $from: $stroke*-1;
     @for $i from $from through $stroke {
-     @for $j from $from through $stroke {
-        $shadow: append($shadow, $i*1px $j*1px 0 $color, comma);
-      }
+        @for $j from $from through $stroke {
+            $shadow: append($shadow, $i*1px $j*1px 0 $color, comma);
+        }
     }
     @return $shadow;
 }
@@ -82,5 +139,23 @@ a, a:link, a:visited, a:hover, a:active {
     }
     30% {
         bottom: 7px;
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(0, -0.5px, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(0, 1px, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(0, -1.5px, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(0, 1.5px, 0);
     }
 }

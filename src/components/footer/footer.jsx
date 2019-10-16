@@ -1,25 +1,22 @@
 import React from 'react';
 import NavList from '../../data/nav';
-import { ReactComponent as Bar } from '../../img/bars.svg';
 import './footer.scss';
 
 function Footer() {
     return (
         <footer className="footer">
             <div className="content">
-                <div>
-                    <ul className="quick-links">
-                        {NavList.nav.map((value, index) => {
-                            return <li key={index}><a id={value.id} className={value.id} href="#">{value.title}</a></li>
-                        })}
-                    </ul>
-                    <p>Made with React JS<br /><br />and<br /><br />Google Fonts</p>
-                    <span>© 2019 Arcie Aquino. All rights reserved.</span>
-                </div>
+                <ul className="quick-links">
+                    {NavList.nav.map((value, index) => {
+                        return <li key={index}><a id={value.id} className={value.id} href="#">{value.title}</a></li>
+                    })}
+                </ul>
+                <p>Made with <a href="https://reactjs.org/" target="_blank" class="link">React JS</a><br /><br /><a href="https://sass-lang.com/" target="_blank" class="link">SASS</a><br /><br />and <a href="https://fonts.google.com/" target=" _blank" class="link">Google Fonts</a></p>
+                <span class="copyright">© 2019 Arcie Aquino. All rights reserved.</span>
             </div>
-            <Bar className="bar-left" />
-            <Bar className="bar-right" />
-        </footer>
+            <div className="bar bar-left"></div>
+            <div className="bar bar-right"></div>
+        </footer >
     );
 }
 

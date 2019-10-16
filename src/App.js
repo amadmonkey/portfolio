@@ -43,6 +43,7 @@ function App() {
 			// entered illustrations
 			if (isOn.illustrations) {
 				navButtons.illustrations.classList.add('active');
+				navButtons.illustrations.parentElement.classList.add('active');
 				let illustrationCards = d.querySelectorAll('.illustration-card');
 				illustrationCards.forEach((dom, i) => {
 					let i2 = i;
@@ -52,20 +53,30 @@ function App() {
 				});
 			} else {
 				navButtons.illustrations.classList.remove('active');
+				navButtons.illustrations.parentElement.classList.remove('active');
 			}
 			// entered skills
 			if (isOn.skills) {
 				navButtons.skills.classList.add('active');
+				navButtons.skills.parentElement.classList.add('active');
 			} else {
 				navButtons.skills.classList.remove('active');
+				navButtons.skills.parentElement.classList.remove('active');
 			}
 			// entered about
 			if (isOn.about) {
 				navButtons.about.classList.add('active');
+				navButtons.about.parentElement.classList.add('active');
 			} else {
 				navButtons.about.classList.remove('active');
+				navButtons.about.parentElement.classList.remove('active');
 			}
 			// manage nav mode
+			if (isOn.illustrations || isOn.about) {
+				document.querySelector('nav').classList.add('light');
+			} else {
+				document.querySelector('nav').classList.remove('light');
+			}
 		} else {
 			d.querySelector('nav').classList.add('hidden');
 			navButtons.illustrations.classList.remove('active');
@@ -117,11 +128,6 @@ function App() {
 
 	// Apply event handlers. Example of firing the scrolling mechanism.
 	document.addEventListener('click', ifNav.bind(null, 1000))
-	// document.getElementById('scrollTop').addEventListener('click', doScrolling.bind(null, '#top', 1500))
-	// document.getElementById('scrollBot').addEventListener('click', doScrolling.bind(null, '#bottom', 4000))
-
-	// Or simply:
-	// doScrolling('#mytarget', 1000)
 
 	return (
 		<div className="app">

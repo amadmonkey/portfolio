@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactComponent as Phone } from '../../img/phone.svg';
 import { ReactComponent as Download } from '../../img/download.svg';
 import { ReactComponent as Email } from '../../img/email.svg';
+import ExperienceList from '../../data/experience.js';
 import './about.scss';
 
 function About() {
@@ -15,68 +16,41 @@ function About() {
                         <div className="about-item">
                             <header>Experience</header>
                             <div className="about-item-content">
-                                <div class="experience-item">
-                                    <h1 className="title">ADEC Innovations</h1>
-                                    <h2><span className="location-icon"></span> <span>Alabang, Metro Manila</span></h2>
-                                    <span className="position">Systems Developer I</span>
-                                    <span className="dates">November 2016 - September 2017</span>
-                                    <span className="tools-header">Tools:</span>
-                                    <ul>
-                                        <li>HTML, CSS</li>
-                                        <li>JavaScript / jQuery</li>
-                                        <li>Java / Spring Boot</li>
-                                        <li>Angular JS</li>
-                                        <li>MySQL</li>
-                                    </ul>
-                                </div>
-                                <div class="experience-item">
-                                    <h1 className="title">Philus Technology Inc.</h1>
-                                    <h2><span className="location-icon"></span> <span>Taguig, Metro Manila</span></h2>
-                                    <span className="position">Angular JS Developer</span>
-                                    <span className="dates">February 2018 - March 2019</span>
-                                    <span className="tools-header">Tools:</span>
-                                    <ul>
-                                        <li>HTML, CSS</li>
-                                        <li>JavaScript / jQuery</li>
-                                        <li>Angular JS</li>
-                                        <li>LESS / SASS</li>
-                                    </ul>
-                                </div>
-                                <div class="experience-item">
-                                    <h1 className="title">Security Bank Corporation</h1>
-                                    <h2><span className="location-icon"></span> <span>Makati City</span></h2>
-                                    <span className="position">Angular JS Developer</span>
-                                    <span className="dates">March 2019 - October 2019</span>
-                                    <span className="tools-header">Tools:</span>
-                                    <ul>
-                                        <li>HTML, CSS</li>
-                                        <li>JavaScript / jQuery</li>
-                                        <li>Angular JS</li>
-                                        <li>LESS / SASS</li>
-                                    </ul>
-                                </div>
+                                {ExperienceList.experience.map((value, index) => {
+                                    return (
+                                        <div class="experience-item" key={index}>
+                                            <h1 className="title">{value.name}</h1>
+                                            <h2><span className="location-icon"></span> <span>{value.address}</span></h2>
+                                            <span className="position">{value.position}</span>
+                                            <span className="dates">{value.dates}</span>
+                                            <span className="tools-header">Tools:</span>
+                                            <ul>
+                                                {value.tools.map((value, index) => {
+                                                    return <li key={index}>{value}</li>
+                                                })}
+                                            </ul>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         </div>
                         {/* EDUCATION */}
                         <div className="about-item">
                             <header>Education</header>
-                            <div className="about-item-content">
-                                <h1>Tertiary:</h1>
-                                <ul>
-                                    <li>Cavite State University - Imus Campus</li>
-                                    <li>Bachelor of Science in Information Technology</li>
-                                    <li>2011 - 2016</li>
-                                </ul>
-                                <h1>Secondary:</h1>
-                                <ul>
-                                    <li>Saint Francis Institute</li>
-                                    <li>2002 - 2006</li>
-                                </ul>
-                                <h1>Primary:</h1>
-                                <ul>
-                                    <li>Oak Tree Christian Academy</li>
-                                    <li>1996 - 2002</li>
-                                </ul>
+                            <div className="about-item-content education">
+                                <h1>Tertiary</h1>
+                                <h2>Cavite State University</h2>
+                                <h2>Imus Campus</h2>
+                                <h2>Bachelor of Science in Information Technology</h2>
+                                <h2>2011 - 2016</h2>
+                                <br />
+                                <h1>Secondary</h1>
+                                <h2>Saint Francis Institute</h2>
+                                <h2>2002 - 2006</h2>
+                                <br />
+                                <h1>Primary</h1>
+                                <h2>Oak Tree Christian Academy</h2>
+                                <h2>1996 - 2002</h2>
                             </div>
                         </div>
                     </div>
@@ -84,48 +58,35 @@ function About() {
                         {/* AWARDS */}
                         <div className="about-item">
                             <header>Awards</header>
-                            <div className="about-item-content">
-                                <div>
-                                    <h1>Developer Bootcamp</h1>
-                                    <ul>
-                                        <li>February 28, 2016</li>
-                                        <li>1st place</li>
-                                        <li>ADEC Innovations - Alabang, Metro Manila</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h1>Developer Bootcamp</h1>
-                                    <ul>
-                                        <li>February 28, 2016</li>
-                                        <li>Best in MS SQL</li>
-                                        <li>ADEC Innovations - Alabang, Metro Manila</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h1>Multimedia Skills Competition</h1>
-                                    <ul>
-                                        <li>October 2, 2014</li>
-                                        <li>1st place</li>
-                                        <li>Cavite State University - Imus Campus</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h1>Poster Making Contest</h1>
-                                    <ul>
-                                        <li>October 2, 2014</li>
-                                        <li>1st place</li>
-                                        <li>Cavite State University - Imus Campus</li>
-                                    </ul>
-                                </div>
+                            <div className="about-item-content awards">
+                                <h1>Developer Bootcamp</h1>
+                                <h2>February 28, 2016</h2>
+                                <h2>1st place</h2>
+                                <h2>ADEC Innovations - Alabang, Metro Manila</h2>
+                                <br />
+                                <h1>Developer Bootcamp</h1>
+                                <h2>February 28, 2016</h2>
+                                <h2>Best in MS SQL</h2>
+                                <h2>ADEC Innovations - Alabang, Metro Manila</h2>
+                                <br />
+                                <h1>Multimedia Skills Competition</h1>
+                                <h2>October 2, 2014</h2>
+                                <h2>1st place</h2>
+                                <h2>Cavite State University - Imus Campus</h2>
+                                <br />
+                                <h1>Poster Making Contest</h1>
+                                <h2>October 2, 2014</h2>
+                                <h2>1st place</h2>
+                                <h2>Cavite State University - Imus Campus</h2>
                             </div>
                         </div>
                         {/* CONTACT */}
                         <div className="about-item">
                             <header>Hire Me (please?)</header>
                             <div className="about-item-content">
-                                <button className="btn-lg btn-call"><a href="#"><Phone className="phone-icon" /> <span>DOWNLOAD DOC</span></a></button>
-                                <button className="btn-lg btn-download"><a href="tel:916-552-3960"><Download className="download-icon" /> <span>09165523960</span></a></button>
-                                <button className="btn-lg btn-email"><a href="mailto:aquinoarcie@gmail.com"><Email className="email-icon" /> <span>SEND ME AN EMAIL</span></a></button>
+                                <button className="btn btn-lg btn-download"><a href="#"><Download className="download-icon" /> <span>DOWNLOAD DOC</span></a></button>
+                                <button className="btn btn-lg btn-call"><a href="tel:916-552-3960"><Phone className="phone-icon" /> <span>09165523960</span></a></button>
+                                <button className="btn btn-lg btn-email"><a href="mailto:aquinoarcie@gmail.com"><Email className="email-icon" /> <span>SEND ME AN EMAIL</span></a></button>
                             </div>
                         </div>
                     </div>

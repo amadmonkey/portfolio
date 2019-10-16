@@ -13,22 +13,20 @@
         content: '';
         position: absolute;
         bottom: -100px;
-        height: 200px;
+        height: 1000px;
+        width: 100%;
+        left: 0;
         @include transition(1s ease-in-out);
     }
 
     &::before {
-        left: 500px;
-        width: 100%;
-        background-color: #FF9329;
-        transform: skewY(-3deg);
+        background-color: $primary;
+        clip-path: polygon(0 78%, 100% 87%, 100% 100%, 0% 100%);
     }
 
     &::after {
-        width: 100%;
         background-color: $secondary-dark;
-        transform: skewY(3deg);
-        left: 0;
+        clip-path: polygon(0 85%, 100% 75%, 100% 100%, 0% 100%);
     }
 
     &.unfocused {

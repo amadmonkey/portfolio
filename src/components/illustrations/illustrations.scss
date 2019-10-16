@@ -16,26 +16,20 @@
         position: absolute;
         bottom: -102px;
         width: 100%;
-        height: 200px;
-        z-index: -1;
+        height: 1000px;
+        left: 0;
         @include transition(1s ease-in-out);
     }
 
     &::before {
-        left: -500px;
         background-color: $primary;
-        transform: skewY(-3deg);
+        clip-path: polygon(0 82%, 100% 89%, 100% 88%, 0 98%);
+        
     }
 
     &::after {
-        content: '';
-        position: absolute;
-        bottom: -102px;
-        width: 100%;
-        height: 200px;
-        left: 0;
         background-color: $secondary-dark;
-        transform: skewY(3deg);
+        clip-path: polygon(0 81%, 100% 81%, 100% 100%, 0 91%);
     }
 
     &.unfocused {
@@ -70,6 +64,7 @@
             stroke-linejoin: round;
         }
     }
+    z-index: 1;
     position: absolute;
     bottom: -130px;
     right: -80px;

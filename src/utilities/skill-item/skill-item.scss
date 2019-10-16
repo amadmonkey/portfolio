@@ -14,9 +14,19 @@
     user-select: none; /* Standard */
     &:nth-of-type(odd) {
         margin-right: 80px;
+        @include large {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
     }
     > * {
         display: inline-block;
+        @include small {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
     }
     .title {
         line-height: 1.4;
@@ -24,12 +34,18 @@
     .skill-rate-container {
         position: absolute;
         right: 0;
-        .skill-rate {
-            margin-left: 15px;
-            display: inline-block;
-            animation: 2s linear point-down;
-            animation-iteration-count: infinite;
+        @include small {
+            margin-bottom: 10px;
         }
+        .skill-rate {
+            &:not(:first-child) {
+                margin-left: 15px;
+            }
+            display: inline-block;
+        }
+    }
+    @include small {
+        margin-bottom: 60px !important;
     }
 }
 

@@ -14,6 +14,11 @@
     opacity: 0;
     cursor: pointer;
     background-color: $secondary-dark;
+    box-shadow: 0 3px 6px #00000052;
+    @include xsmall {
+        width: 240px;
+        height: 240px;
+    }
     @include transition(0.5s ease-out);
     &.portrait {
         img {
