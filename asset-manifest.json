@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.fc439abc.chunk.css",
+    "main.css": "/portfolio/static/css/main.9cef6897.chunk.css",
     "main.js": "/portfolio/static/js/main.3d805a4b.chunk.js",
     "main.js.map": "/portfolio/static/js/main.3d805a4b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.021c856b.js",
@@ -8,9 +8,9 @@
     "static/js/2.3da6090f.chunk.js": "/portfolio/static/js/2.3da6090f.chunk.js",
     "static/js/2.3da6090f.chunk.js.map": "/portfolio/static/js/2.3da6090f.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.16dde68442732da25164070a7e4a9053.js": "/portfolio/precache-manifest.16dde68442732da25164070a7e4a9053.js",
+    "precache-manifest.894eba4d5d06a2ed247e40e9178d9641.js": "/portfolio/precache-manifest.894eba4d5d06a2ed247e40e9178d9641.js",
     "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.fc439abc.chunk.css.map": "/portfolio/static/css/main.fc439abc.chunk.css.map",
+    "static/css/main.9cef6897.chunk.css.map": "/portfolio/static/css/main.9cef6897.chunk.css.map",
     "static/media/App.scss": "/portfolio/static/media/Montserrat-SemiBold.c641dbee.ttf",
     "static/media/brackets.bd99bf52.svg": "/portfolio/static/media/brackets.bd99bf52.svg",
     "static/media/download.64b27928.svg": "/portfolio/static/media/download.64b27928.svg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.021c856b.js",
     "static/js/2.3da6090f.chunk.js",
-    "static/css/main.fc439abc.chunk.css",
+    "static/css/main.9cef6897.chunk.css",
     "static/js/main.3d805a4b.chunk.js"
   ]
 }
