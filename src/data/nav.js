@@ -13,6 +13,10 @@ export default {
             isShown: false
         }),
         new Nav({
+            title: "apps",
+            isShown: true
+        }),
+        new Nav({
             title: "art",
             isShown: true
         }),

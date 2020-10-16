@@ -8,6 +8,7 @@
     text-align: left;
     margin-bottom: 30px;
     color: $secondary-light;
+    font-size: 14px;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
@@ -34,15 +35,22 @@
     .skill-rate-container {
         position: absolute;
         right: 0;
+        top: 8px;
         @include small {
             margin-bottom: 10px;
         }
         .skill-rate {
             &:not(:first-child) {
-                margin-left: 15px;
+                margin-left: 13px;
             }
             display: inline-block;
         }
+    }
+    .skill-img {
+        width: 25px;
+        top: 6px;
+        margin-right: 10px;
+        position: relative;
     }
     @include small {
         margin-bottom: 60px !important;

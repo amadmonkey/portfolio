@@ -1,0 +1,103 @@
+@import "../../Variables.scss";
+
+.app-card {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 200px;
+    background-color: white;
+    width: 100%;
+    position: relative;
+    top: 40px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background-color: #290927;
+    padding: 20px;
+    box-sizing: border-box;
+    filter: drop-shadow( 0px 4px 3px rgba(0, 0, 0, 0.4));
+    @include transition(0.5s ease-out);
+    > * {
+        flex-grow: 1;
+    }
+    @include mdAbout {
+        flex-direction: column;
+        height: auto;
+    }
+    .app-card-img-container {
+        height: 100%;
+        max-width: 290px;
+        display: inline-block;
+        @include mdAbout {
+            max-width: 100%;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    .app-card-details {
+        text-align: right;
+        width: 60%;
+        padding-left: 15px;
+        @include medium {
+            width: 50%;
+        }
+        @include mdAbout {
+            width: 100%;
+            padding-left: 0;
+            text-align: center;
+        }
+        .title {
+            color: $primary;
+            margin: 15px 0;
+            a {
+                position: relative;
+                cursor: pointer;
+                @include transition(0.2s ease-in-out);
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -1px;
+                    height: 1px;
+                    width: 0px;
+                    background-color: $primary;
+                    @include transition(0.2s ease-in-out);
+                }
+                &:hover {
+                    color: $primary;
+                    &::before {
+                        width: 98%;
+                    }
+                }
+            }
+        }
+        .description {
+            color: $teal;
+            font-size: 12px;
+            line-height: 1.4;
+            height: 66px;
+            overflow: hidden;
+        }
+        .tools-container {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            @include mdAbout {
+                margin-top: 50px;
+                position: relative;
+                text-align: center;
+                bottom: 0;
+                right: 0;
+            }
+            .app-tool-image {
+                height: 25px;
+                margin-left: 10px;
+                @include small {
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

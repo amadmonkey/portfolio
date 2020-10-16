@@ -7,7 +7,12 @@
     padding-top: 200px;
     padding-bottom: 400px;
     text-align: center;
-
+    @media (min-width: 961px) {
+        text-align: left;
+    }
+    @include large {
+        text-align: center;
+    }
     &::before,
     &::after {
         content: '';
@@ -22,11 +27,13 @@
     &::before {
         background-color: $primary;
         clip-path: polygon(0 78%, 100% 87%, 100% 100%, 0% 100%);
+        clip-path: ellipse(50% 27% at 5% 104%);
     }
 
     &::after {
         background-color: $secondary-dark;
         clip-path: polygon(0 85%, 100% 75%, 100% 100%, 0% 100%);
+        clip-path: ellipse(79% 25% at 62% 104%);
     }
 
     &.unfocused {

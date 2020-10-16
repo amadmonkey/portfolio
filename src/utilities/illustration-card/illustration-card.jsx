@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './illustration-card.scss';
 
 function IllustrationCard(props) {
-    let linkArray = props.path.split('.');
-
     const [hasLoaded, setHasLoaded] = useState(false);
 
     const isImageLoaded = () => {
@@ -12,7 +10,7 @@ function IllustrationCard(props) {
 
     return (
         <div className={"hidden illustration-card " + (props.isPortrait ? 'portrait' : 'landscape')}>
-            <a href={linkArray[0] + 'x2.' + linkArray[1]} target="_blank"><img onLoad={isImageLoaded.bind(this)} src={props.path} alt="" className={!hasLoaded && 'blur'} /></a>
+            <a href={props.path.lg} target="_blank"><img loading="lazy" onLoad={isImageLoaded.bind(this)} src={props.path.sm} alt={props.title} className={!hasLoaded ? 'blur' : ''} /></a>
         </div>
     );
 

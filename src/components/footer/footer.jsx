@@ -14,8 +14,17 @@ function Footer() {
                         return <li key={index}><a id={value.id} className={value.id}>{value.title}</a></li>
                     })}
                 </ul>
-                <p>Made with <a href="https://reactjs.org/" target="_blank" class="link">React JS</a><br /><br /><a href="https://sass-lang.com/" target="_blank" class="link">SASS</a><br /><br />and <a href="https://fonts.google.com/" target=" _blank" class="link">Google Fonts</a></p>
-                <span class="copyright">© {d.getFullYear()} Arcie Aquino. All rights reserved.</span>
+                <p>
+                    Made with <a href="https://reactjs.org/" target="_blank" className="link">React JS</a>
+                    <br /><br />
+                    <a href="https://sass-lang.com/" target="_blank" className="link">SASS</a><br /><br />
+                    and <a href="https://fonts.google.com/" target="_blank" className="link">Google Fonts</a>
+                    <br /><br />
+                    <br /><br />
+                    <br /><br />
+                    Brand icons from <a href="https://simpleicons.org" target="_blank" className="link">Simple Icons</a>
+                </p>
+                <span className="copyright">© {d.getFullYear()} Arcie Aquino. All rights reserved.</span>
             </div>
             <div className="bar bar-left"></div>
             <div className="bar bar-right"></div>

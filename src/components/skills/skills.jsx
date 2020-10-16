@@ -10,7 +10,7 @@ function Skills() {
         <section id="_SKILLS_SECTION" className="skills">
             <div className="content skills-content">
                 {SkillsList.skills.map((value, index) => {
-                    return <SkillItem title={value.title} rate={value.rate} key={index} />
+                    return <SkillItem data={value} key={index} />
                 })}
             </div>
             <Html className="html" />

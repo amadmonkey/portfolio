@@ -38,13 +38,15 @@
 
     &::before {
         background-color: $primary;
-        clip-path: polygon(0 82%, 100% 75%, 100% 99%, 0 86%);
+        // clip-path: polygon(0 82%, 100% 75%, 100% 99%, 0 86%);
+        clip-path: ellipse(50% 27% at 91% 72%);
         
     }
 
     &::after {
         background-color: $secondary-dark;
-        clip-path: polygon(0 82%, 100% 63%, 100% 90%, 0 98%)
+        // clip-path: polygon(0 82%, 100% 63%, 100% 90%, 0 98%);
+        clip-path: ellipse(79% 25% at 37% 75%);
     }
 
 

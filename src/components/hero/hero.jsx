@@ -4,6 +4,9 @@ import { ReactComponent as Logo } from '../../img/mm.svg';
 import './hero.scss';
 
 function Hero() {
+
+
+
     return (
         <section id="_HERO_SECTION" className="hero">
             <div className="logo-container">

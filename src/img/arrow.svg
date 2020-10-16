@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .arrow-svg {
+        fill: #c6efee;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Polygon_1" data-name="Polygon 1" class="arrow-svg" d="M30.012,15.983L3.026,31.989V-0.023Z"/>
+</svg>

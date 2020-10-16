@@ -1,11 +1,16 @@
 class Illustration {
     basePath = '/illustrations/';
-    basePath = '/portfolio/illustrations/';
-    constructor({ title = "", desc = "", isPortrait = true, imgName = "" }) {
+    // basePath = '/portfolio/illustrations/';
+    constructor({ title = "", desc = "", isPortrait = true, dominantColor = "", imgName = "" }) {
         this.title = title;
         this.desc = desc;
         this.isPortrait = isPortrait;
-        this.path = this.basePath + imgName;
+        this.dominantColor = dominantColor;
+        this.path = {
+            sm: this.basePath + imgName.sm,
+            md: this.basePath + (imgName.md ? imgName.md : imgName.lg),
+            lg: this.basePath + imgName.lg
+        }
     }
 }
 
@@ -13,57 +18,99 @@ export default {
     illustrations: [
         new Illustration({
             title: "Flamingo Logo",
-            desc: "",
+            desc: "Used on a local bar business.",
             isPortrait: true,
-            imgName: "01.jpg"
+            dominantColor: "#fff",
+            imgName: {
+                sm: "01-sm.jpg",
+                md: "01-md.jpg",
+                lg: "01-lg.jpg"
+            }
         }),
         new Illustration({
             title: "Shots",
-            desc: "",
+            desc: "Used on a local bar business.",
             isPortrait: false,
-            imgName: "03.jpg"
-        }),
-        new Illustration({
-            title: "Get To Work",
-            desc: "",
-            isPortrait: false,
-            imgName: "04.jpg"
-        }),
-        new Illustration({
-            title: "Mr. Greedy",
-            desc: "",
-            isPortrait: false,
-            imgName: "06.jpg"
-        }),
-        new Illustration({
-            title: "Application Image",
-            desc: "",
-            isPortrait: true,
-            imgName: "07.jpg"
-        }),
-        new Illustration({
-            title: "Project Green",
-            desc: "",
-            isPortrait: false,
-            imgName: "08.jpg"
+            dominantColor: "#fff",
+            imgName: {
+                sm: "03-sm.jpg",
+                md: "03-md.jpg",
+                lg: "03-lg.jpg"
+            }
         }),
         new Illustration({
             title: "Competition Entry",
-            desc: "",
+            desc: "Won first place. Don't ask me why/how.",
             isPortrait: true,
-            imgName: "09.jpg"
+            dominantColor: "#fff",
+            imgName: {
+                sm: "09-sm.jpg",
+                lg: "09-lg.jpg"
+            }
+        }),
+        new Illustration({
+            title: "Get To Work",
+            desc: "A college thesis app logo.",
+            isPortrait: false,
+            dominantColor: "#fff",
+            imgName: {
+                sm: "04-sm.jpg",
+                md: "04-md.jpg",
+                lg: "04-lg.jpg"
+            }
+        }),
+        new Illustration({
+            title: "Mr. Greedy",
+            desc: "Scrapped mascot design for an app. Went with a more professional look instead.",
+            isPortrait: false,
+            dominantColor: "#fff",
+            imgName: {
+                sm: "06-sm.jpg",
+                md: "06-md.jpg",
+                lg: "06-lg.jpg"
+            }
         }),
         new Illustration({
             title: "Shirt Design",
-            desc: "",
+            desc: "College shirt design",
             isPortrait: true,
-            imgName: "11.jpg"
+            dominantColor: "#fff",
+            imgName: {
+                sm: "11-sm.jpg",
+                md: "11-md.jpg",
+                lg: "11-lg.jpg"
+            }
+        }),
+        new Illustration({
+            title: "Application Image",
+            desc: "Used for a school project. Please don't count the fingers.",
+            isPortrait: false,
+            dominantColor: "#63c976",
+            imgName: {
+                sm: "07-sm.jpg",
+                lg: "07-lg.jpg"
+            }
+        }),
+        new Illustration({
+            title: "Project Green",
+            desc: "A college thesis app logo.",
+            isPortrait: false,
+            dominantColor: "#fff",
+            imgName: {
+                sm: "08-sm.jpg",
+                md: "08-md.jpg",
+                lg: "08-lg.jpg"
+            }
         }),
         new Illustration({
             title: "Batman",
-            desc: "",
+            desc: "Batfleck",
             isPortrait: true,
-            imgName: "12.jpg"
+            dominantColor: "#000",
+            imgName: {
+                sm: "12-sm.jpg",
+                lg: "12-lg.jpg"
+            }
         })
     ]
 };

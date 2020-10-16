@@ -29,9 +29,14 @@ html {
     opacity: 0;
 }
 
-.fade-move-up {
+.fade-in-move-up {
     opacity: 1;
     top: 0;
+}
+
+.fade-out-move-down {
+    opacity: 0;
+    top: 30px;
 }
 
 // https://codepen.io/GhostRider/pen/GHaFw

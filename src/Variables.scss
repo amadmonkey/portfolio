@@ -26,6 +26,7 @@ $secondary: #550F53;
 $secondary-light: #811E7E;
 $secondary-dark: #550F53; // override
 $secondary-dark: #340932;
+// $secondary-dark: #190318;
 $danger: #FF3939;
 // lighter
 $rate-1: #45ef73;
@@ -139,6 +140,42 @@ a, a:link, a:visited, a:hover, a:active {
     }
     30% {
         bottom: 7px;
+    }
+}
+
+@keyframes point-right {
+    0% {
+        right: 20%;
+    }
+    5% {
+        right: 19%;
+    }
+    10% {
+        right: 20%;
+    }
+    15% {
+        right: 19%;
+    }
+    20% {
+        right: 20%;
+    }
+}
+
+@keyframes point-left {
+    0% {
+        left: 20%;
+    }
+    5% {
+        left: 19%;
+    }
+    10% {
+        left: 20%;
+    }
+    15% {
+        left: 19%;
+    }
+    20% {
+        left: 20%;
     }
 }
 

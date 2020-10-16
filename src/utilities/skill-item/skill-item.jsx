@@ -2,13 +2,13 @@ import React from 'react';
 import './skill-item.scss';
 import { ReactComponent as Star } from '../../img/star.svg';
 
-function IllustrationCard(props) {
+function SkillItem(props) {
 
     const generateRate = () => {
         let rates = [];
         for (let x = 0; x < 5; x++) {
             let rate;
-            if (x < props.rate) {
+            if (x < props.data.rate) {
                 rate = React.createElement('div', { className: 'skill-rate active', key: x }, <Star />);
             } else {
                 rate = React.createElement('div', { className: 'skill-rate', key: x }, <Star />);
@@ -20,7 +20,8 @@ function IllustrationCard(props) {
 
     return (
         <div className="skill-item">
-            <span className="title">{props.title}</span>
+            <img className="skill-img" src={props.data.path.dark}></img>
+            <span className="title">{props.data.title}</span>
             <div className="skill-rate-container">
                 {generateRate()}
             </div>
@@ -28,4 +29,4 @@ function IllustrationCard(props) {
     );
 }
 
-export default IllustrationCard;
+export default SkillItem;

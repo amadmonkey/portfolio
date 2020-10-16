@@ -25,7 +25,7 @@ function About() {
               <div className="about-item-content">
                 {ExperienceList.experience.map((value, index) => {
                   return (
-                    <div class="experience-item" key={index}>
+                    <div className="experience-item" key={index}>
                       <h1 className="title">{value.name}</h1>
                       <h2>
                         <span className="location-icon"></span>{" "}
@@ -92,7 +92,7 @@ function About() {
             </div>
             {/* CONTACT */}
             <div className="about-item">
-              <header>Hire Me (please?)</header>
+              <header>Contact</header>
               <div className="about-item-content">
                 <button className="btn btn-lg btn-download">
                   <a href="#">

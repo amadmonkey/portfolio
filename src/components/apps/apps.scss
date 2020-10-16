@@ -1,0 +1,10 @@
+@import "../../Variables.scss";
+
+.apps {
+    height: auto;
+    padding: 200px 0;
+    background-color: $secondary-dark;
+    .apps-content {
+        // min-height: 800px;
+    }
+}
