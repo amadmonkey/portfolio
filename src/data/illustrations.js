@@ -40,7 +40,7 @@ export default {
         }),
         new Illustration({
             title: "Competition Entry",
-            desc: "Won first place. Don't ask me why/how.",
+            desc: "Won first place. Don't ask me why or how.",
             isPortrait: true,
             dominantColor: "#fff",
             imgName: {

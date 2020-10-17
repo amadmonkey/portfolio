@@ -50,7 +50,7 @@
         }
         .title {
             color: $primary;
-            margin: 15px 0;
+            margin-bottom: 10px;
             a {
                 position: relative;
                 cursor: pointer;
@@ -76,9 +76,15 @@
         .description {
             color: $teal;
             font-size: 12px;
-            line-height: 1.4;
-            height: 66px;
+            line-height: 1.5;
+            height: 100px;
             overflow: hidden;
+            a {
+                color: $primary;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
         .tools-container {
             position: absolute;

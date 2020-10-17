@@ -63,7 +63,7 @@ nav {
                 margin: 0 auto;
                 width: 100px;
                 position: relative;
-                @include transition(color 0.5s ease-in-out);
+                @include transition(color 0.2s ease-out);
                 &::before,
                 &::after {
                     content: '';
@@ -73,7 +73,7 @@ nav {
                     z-index: 1;
                     border-radius: 10px;
                     box-shadow: 0 2px 3px #0000007a;
-                    @include transition(0.5s ease-in-out);
+                    @include transition(0s ease-out);
                 }
                 &::before {
                     top: -4px;

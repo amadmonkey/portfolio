@@ -19,7 +19,7 @@ function AppCard(props) {
             </div>
             <div className="app-card-details">
                 <h1 className="title"><a href={props.app.link} target="_blank" className="link" rel="noopener noreferrer">{props.app.name}</a></h1>
-                <p className="description">{props.app.description}</p>
+                <p className="description" dangerouslySetInnerHTML={{ __html: props.app.description }}></p>
                 <div className="tools-container">
                     {tools.map((value, index) => {
                         return <img className="app-tool-image" src={value.path.light} key={index} alt={value.path.title} />;

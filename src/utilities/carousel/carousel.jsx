@@ -62,9 +62,6 @@ function IllustrationCard(props) {
                     HandleNext();
                 }
                 timer = setTimeout(() => { setCarouselIsReady(true) }, 180);
-                // } else {
-                //     timer = setTimeout(() => { setCarouselIsReady(true) }, 180);
-                // }
             }
         }
         window.addEventListener('keydown', handleKeyDown);
