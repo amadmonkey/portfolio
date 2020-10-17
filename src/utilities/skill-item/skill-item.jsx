@@ -20,7 +20,7 @@ function SkillItem(props) {
 
     return (
         <div className="skill-item">
-            <img className="skill-img" src={props.data.path.dark}></img>
+            <img className="skill-img" src={props.data.path.dark} alt={props.data.title} />
             <span className="title">{props.data.title}</span>
             <div className="skill-rate-container">
                 {generateRate()}

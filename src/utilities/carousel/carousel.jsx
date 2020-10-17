@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useKeyPress, ReactDOM } from 'react';
+import React, { useState, useEffect } from 'react';
 import './carousel.scss';
 import { ReactComponent as Previous } from '../../img/previous.svg';
 import { ReactComponent as Next } from '../../img/next.svg';
@@ -16,7 +16,7 @@ function IllustrationCard(props) {
     });
 
     const AssignImages = () => {
-        images.map((value, index) => { value.position = "" })
+        images.forEach((value, index) => { value.position = "" })
         images[activeIndex.tertiary1].position = "carousel-tertiary carousel-tertiary-left";
         images[activeIndex.secondary1].position = "carousel-secondary carousel-secondary-left";
         images[activeIndex.primary].position = "carousel-primary";
@@ -50,8 +50,6 @@ function IllustrationCard(props) {
 
 
     useEffect(() => {
-        let position = document.querySelector('.illustrations');
-        let top = position.getBoundingClientRect().top;
         let timer = null;
         const handleKeyDown = (e) => {
             if (carouselIsReady) {
@@ -82,9 +80,9 @@ function IllustrationCard(props) {
                 {images.map((value, index) => {
                     return (
                         <div className={`carousel-item ${value.position ? value.position : ``} ${value.isPortrait ? "portrait" : "landscape"}`} style={{ backgroundColor: value.dominantColor ? value.dominantColor : '#fff' }} key={index}>
-                            <img loading="lazy" src={value.path.md} key={index} />
+                            <img loading="lazy" src={value.path.md} key={index} alt={value.title} />
                             <div className="carousel-item-lip">
-                                <a href={value.path.lg} target="_blank">See full image</a>
+                                <a href={value.path.lg} target="_blank" rel="noopener noreferrer">See full image</a>
                             </div>
                         </div>
                     )

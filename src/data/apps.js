@@ -1,6 +1,6 @@
 class App {
-    basePath = '/app-screenshots/';
-    // basePath = '/portfolio/app-screenshots/';
+    // basePath = '/app-screenshots/';
+    basePath = '/portfolio/app-screenshots/';
     constructor({ name = "", link = "", imgName = "", description = "", lastUpdated = "", tools = [] }) {
         this.name = name;
         this.link = link;

@@ -15,14 +15,14 @@ function Footer() {
                     })}
                 </ul>
                 <p>
-                    Made with <a href="https://reactjs.org/" target="_blank" className="link">React JS</a>
+                    Made with <a href="https://reactjs.org/" target="_blank" className="link" rel="noopener noreferrer">React JS</a>
                     <br /><br />
-                    <a href="https://sass-lang.com/" target="_blank" className="link">SASS</a><br /><br />
-                    and <a href="https://fonts.google.com/" target="_blank" className="link">Google Fonts</a>
+                    <a href="https://sass-lang.com/" target="_blank" className="link" rel="noopener noreferrer">SASS</a><br /><br />
+                    and <a href="https://fonts.google.com/" target="_blank" className="link" rel="noopener noreferrer">Google Fonts</a>
                     <br /><br />
                     <br /><br />
                     <br /><br />
-                    Brand icons from <a href="https://simpleicons.org" target="_blank" className="link">Simple Icons</a>
+                    Brand icons from <a href="https://simpleicons.org" target="_blank" className="link" rel="noopener noreferrer">Simple Icons</a>
                 </p>
                 <span className="copyright">© {d.getFullYear()} Arcie Aquino. All rights reserved.</span>
             </div>

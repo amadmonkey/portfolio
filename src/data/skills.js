@@ -1,6 +1,6 @@
 class Skill {
-    basePath = '/tech/';
-    // basePath = '/portfolio/tech/';
+    // basePath = '/tech/';
+    basePath = '/portfolio/tech/';
     constructor({ id = "", title = "", rate = "", imgName = "" }) {
         this.id = id;
         this.title = title;

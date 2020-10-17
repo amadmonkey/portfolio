@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Nav from './components/nav/nav';
 import Hero from './components/hero/hero';
 import Apps from './components/apps/apps';
@@ -54,7 +54,6 @@ function App() {
 		if (isOn.hero || isOn.apps || isOn.illustrations || isOn.skills || isOn.about) {
 			d.getElementById('nav').classList.remove('hidden');
 			let AppCards = d.querySelectorAll('.app-card');
-			let illustrationCards = d.querySelectorAll('.illustration-card');
 			// entered apps
 			if (isOn.apps) {
 				navButtons.apps.classList.add('active');
@@ -90,7 +89,7 @@ function App() {
 				carouselImages.forEach((dom, i) => {
 					let i2 = i;
 					setTimeout(function () {
-						if (dom.length == 1) {
+						if (dom.length === 1) {
 							dom[0].classList.remove('carousel-fade-out-move-down');
 							dom[0].classList.add('carousel-fade-in-move-up');
 						} else {
@@ -116,7 +115,7 @@ function App() {
 				carouselImages.forEach((dom, i) => {
 					let i2 = i;
 					setTimeout(function () {
-						if (dom.length == 1) {
+						if (dom.length === 1) {
 							dom[0].classList.remove('carousel-fade-in-move-up');
 							dom[0].classList.add('carousel-fade-out-move-down');
 						} else {
@@ -193,19 +192,34 @@ function App() {
 		})
 	}
 
-	function ifNav(duration, element) {
-		let op = navList.filter(data => (data.id === element.target.classList.value));
-		if (op.length) {
-			doScrolling(duration, element);
-		}
-	}
+	
 
 	// Apply event handlers. Example of firing the scrolling mechanism.
-	document.addEventListener('click', ifNav.bind(null, 1000))
+	useEffect(() => {
+		
+		let nav = document.querySelector('#nav');
+		let quickLinks = document.querySelector('.quick-links');
+
+		function handleScroll(duration, element) {
+			let op = navList.filter(data => (data.id === element.target.classList.value));
+			if (op.length) {
+				doScrolling(duration, element);
+			}
+		}
+
+		nav.addEventListener('click', handleScroll.bind(null, 1000));
+		quickLinks.addEventListener('click', handleScroll.bind(null, 1000));
+
+		return () => {
+			nav.removeEventListener('click', handleScroll);
+			quickLinks.removeEventListener('click', handleScroll);
+		}
+
+	}, [navList])
 
 	// remove clip paths if internet explorer
-	var ua = window.navigator.userAgent;
-	var msie = ua.indexOf("MSIE ");
+	// var ua = window.navigator.userAgent;
+	// var msie = ua.indexOf("MSIE");
 
 	return (
 		<div className="app">
