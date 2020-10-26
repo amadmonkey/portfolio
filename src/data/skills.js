@@ -1,6 +1,6 @@
 class Skill {
-    // basePath = '/tech/';
-    basePath = '/portfolio/tech/';
+    basePath = '/tech/';
+    // basePath = '/portfolio/tech/';
     constructor({ id = "", title = "", rate = "", imgName = "" }) {
         this.id = id;
         this.title = title;
@@ -49,6 +49,12 @@ export default {
             title: "React JS",
             rate: 3,
             imgName: "react"
+        }),
+        new Skill({
+            id: 13,
+            title: "Socket.io",
+            rate: 4,
+            imgName: "socketdotio"
         }),
         new Skill({
             id: 7,

@@ -22,7 +22,7 @@ function AppCard(props) {
                 <p className="description" dangerouslySetInnerHTML={{ __html: props.app.description }}></p>
                 <div className="tools-container">
                     {tools.map((value, index) => {
-                        return <img className="app-tool-image" src={value.path.light} key={index} alt={value.path.title} />;
+                        return <img loading="lazy" className="app-tool-image" src={value.path.light} key={index} alt={value.path.title} />;
                     })}
                 </div>
             </div>

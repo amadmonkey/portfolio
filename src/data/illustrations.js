@@ -1,6 +1,6 @@
 class Illustration {
-    // basePath = '/illustrations/';
-    basePath = '/portfolio/illustrations/';
+    basePath = '/illustrations/';
+    // basePath = '/portfolio/illustrations/';
     constructor({ title = "", desc = "", isPortrait = true, dominantColor = "", imgName = "" }) {
         this.title = title;
         this.desc = desc;
@@ -110,6 +110,16 @@ export default {
             imgName: {
                 sm: "12-sm.jpg",
                 lg: "12-lg.jpg"
+            }
+        }),
+        new Illustration({
+            title: "A Woman",
+            desc: "A woman with her starbucks",
+            isPortrait: true,
+            dominantColor: "#fff",
+            imgName: {
+                sm: "13-sm.jpg",
+                lg: "13-lg.jpg"
             }
         })
     ]
