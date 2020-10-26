@@ -10,12 +10,10 @@ function About() {
     <section id="_ABOUT_SECTION" className="about">
       <div className="content about-content">
         <p>
-          I do web development and I love doing it with style. I like thinking
-          of new ways to improve processes and make it easier for users to
-          understand and navigate through applications. Life's hard as it is why
-          add to it? For me making applications is not just about giving options
-          to users. It's also about having them have a great experience doing it too. I love
-          creating algorithms and just simply try and make things work.
+          I do web development and I love doing it with style.
+          I like thinking of new ways to improve processes and make it easier for users to understand and navigate through applications.
+          Life's hard as it is why add to it? I love making applications fun to use.
+          I love creating algorithms and just simply try and make things work.
         </p>
         <div className="about-container">
           <div>
