@@ -50,10 +50,33 @@ function App() {
 			d.querySelectorAll('.carousel-description')
 		]
 		let carouselContainer = d.querySelector('.carousel-container');
-		// if on a section that nav needs to show
+
+		if(window.pageYOffset > (sections.hero.getBoundingClientRect().top + (sections.hero.clientHeight/2))){
+			sections.hero.classList.add('inactive');
+		} else {
+			sections.hero.classList.remove('inactive');
+		}
+		if(window.pageYOffset > (sections.skills.getBoundingClientRect().top + (sections.skills.clientHeight*1.5))){
+			sections.illustrations.classList.add('inactive');
+		} else {
+			sections.illustrations.classList.remove('inactive');
+		}
+		if(window.pageYOffset > (sections.skills.getBoundingClientRect().top + (sections.skills.clientHeight*3.5))){
+			sections.skills.classList.add('inactive');
+		} else {
+			sections.skills.classList.remove('inactive');
+		}
+		if(window.pageYOffset > (sections.about.getBoundingClientRect().top + (sections.about.clientHeight*3.3))){
+			sections.about.classList.add('inactive');
+		} else {
+			sections.about.classList.remove('inactive');
+		}
+
+		// if on a section that nav needs to be visible
 		if (isOn.hero || isOn.apps || isOn.illustrations || isOn.skills || isOn.about) {
 			d.getElementById('nav').classList.remove('hidden');
 			let AppCards = d.querySelectorAll('.app-card');
+			
 			// entered apps
 			if (isOn.apps) {
 				navButtons.apps.classList.add('active');
@@ -100,9 +123,6 @@ function App() {
 						}
 					}, (i2 * 200));
 				})
-				// moveCarousel = (e) => {
-				// 	debugger
-				// }
 			} else {
 				navButtons.illustrations.classList.remove('active');
 				navButtons.illustrations.parentElement.classList.remove('active');
@@ -218,8 +238,8 @@ function App() {
 	}, [navList])
 
 	// remove clip paths if internet explorer
-	// var ua = window.navigator.userAgent;
-	// var msie = ua.indexOf("MSIE");
+	var ua = window.navigator.userAgent;
+	var msie = ua.indexOf("MSIE");
 
 	return (
 		<div className="app">

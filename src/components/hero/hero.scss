@@ -7,26 +7,50 @@
     position: relative;
     overflow: hidden;
 
-    &::before,
-    &::after {
-        content: '';
+    // &::before,
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     bottom: -102px;
+    //     width: 100%;
+    //     height: 1000px;
+    //     @include transition(1s ease-in-out);
+    // }
+
+    // &::before {
+    //     background-color: $primary;
+    //     // clip-path: polygon(0 78%, 100% 87%, 100% 100%, 0% 100%);
+    //     clip-path: ellipse(50% 27% at 5% 104%);
+    // }
+
+    // &::after {
+    //     background-color: $secondary-dark;
+    //     // clip-path: polygon(0 85%, 100% 75%, 100% 100%, 0% 100%);
+    //     clip-path: ellipse(79% 25% at 62% 104%);
+    // }
+    .egg {
         position: absolute;
         bottom: -102px;
         width: 100%;
         height: 1000px;
-        @include transition(1s ease-in-out);
+        pointer-events: none;
+        @include transition(0.5s ease-in-out);
+        &.egg-yellow {
+            background-color: $primary;
+            clip-path: ellipse(50% 27% at 5% 104%);
+        }
+        &.egg-purple {
+            background-color: $secondary-dark;
+            clip-path: ellipse(82% 25% at 67% 104%);
+        }
     }
-
-    &::before {
-        background-color: $primary;
-        // clip-path: polygon(0 78%, 100% 87%, 100% 100%, 0% 100%);
-        clip-path: ellipse(50% 27% at 5% 104%);
-    }
-
-    &::after {
-        background-color: $secondary-dark;
-        // clip-path: polygon(0 85%, 100% 75%, 100% 100%, 0% 100%);
-        clip-path: ellipse(79% 25% at 62% 104%);
+    &.inactive {
+        .egg.egg-yellow {
+            clip-path: ellipse(80% 117% at 5% 104%);
+        }
+        .egg.egg-purple {
+            clip-path: ellipse(142% 105% at 67% 104%);
+        }
     }
     
     .logo-container {
@@ -34,6 +58,7 @@
         width: 200px;
         margin: 0 auto;
         margin-bottom: 50px;
+        z-index: 0;
         .logo {
             height: 100%;
             width: 100%;

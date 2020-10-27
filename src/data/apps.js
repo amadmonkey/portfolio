@@ -37,7 +37,7 @@ export default {
             name: "Just another Chess App",
             link: "https://amadmonkey.github.io/chess/",
             imgName: "just-another-chess-app.png",
-            description: "Started as a chat app to teach myself socket.io, got the idea from <a href='https://www.chess.com' target='_blank' rel='noreferrer noopener'>chess.com</a> glad I added the game as it added to the challenge and made it more fun to create. Theme is based off of an icon pack from <a href='https://www.flaticon.com/authors/freepik' target='_blank' rel='noopener noreferrer' title='Freepik'>Freepik</a>. Was originally going to use it during the development process only but i liked how it turned out. Going to create a custom more badass theme as an option next.",
+            description: "Started as a chat app to teach myself <a href='http://socket.io/' target='_blank' rel='noreferrer noopener'>socket.io</a>, got the idea from <a href='https://www.chess.com' target='_blank' rel='noreferrer noopener'>chess.com</a> glad I added the game as it added to the challenge and made it more fun to create. Theme is based off of an icon pack from <a href='https://www.flaticon.com/authors/freepik' target='_blank' rel='noopener noreferrer' title='Freepik'>Freepik</a>. Was originally going to use it during the development process only but i liked how it turned out. Going to create a custom more badass theme as an option next.",
             lastUpdated: "10/27/2020",
             update: [
                 "Check/Checkmate UX",

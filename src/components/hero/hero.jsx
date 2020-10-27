@@ -4,9 +4,6 @@ import { ReactComponent as Logo } from '../../img/mm.svg';
 import './hero.scss';
 
 function Hero() {
-
-
-
     return (
         <section id="_HERO_SECTION" className="hero">
             <div className="logo-container">
@@ -18,6 +15,8 @@ function Hero() {
                 <p>I do web development and I love doing it with <span>style</span></p>
                 <MoveIndicator />
             </div>
+            <div className="egg egg-yellow active"></div>
+            <div className="egg egg-purple active"></div>
         </section>
     );
 }

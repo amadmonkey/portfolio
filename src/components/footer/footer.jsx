@@ -26,8 +26,8 @@ function Footer() {
                 </p>
                 <span className="copyright">© {d.getFullYear()} Arcie Aquino. All rights reserved.</span>
             </div>
-            <div className="bar bar-left"></div>
-            <div className="bar bar-right"></div>
+            {/* <div className="bar bar-left"></div>
+            <div className="bar bar-right"></div> */}
         </footer >
     );
 }

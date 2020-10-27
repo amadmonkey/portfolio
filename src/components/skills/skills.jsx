@@ -13,6 +13,8 @@ function Skills() {
                     return <SkillItem data={value} key={index} />
                 })}
             </div>
+            <div className="egg egg-yellow"></div>
+            <div className="egg egg-purple"></div>
             <Html className="html" />
             <Braces className="braces" />
         </section>

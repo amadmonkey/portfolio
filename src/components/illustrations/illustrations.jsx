@@ -19,11 +19,12 @@ function Illustrations() {
                     <Carousel images={IllustrationsList.illustrations} />
                 </div>
             </div>
+            <div className="egg egg-yellow"></div>
+            <div className="egg egg-purple"></div>
             <PencilLeft className="pencil-left" />
             <PencilRight className="pencil-right" />
             <Ruler className="ruler" />
         </section >
-
     );
 }
 

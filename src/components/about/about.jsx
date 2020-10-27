@@ -114,6 +114,8 @@ function About() {
           </div>
         </div>
       </div>
+      <div className="egg egg-yellow"></div>
+      <div className="egg egg-purple"></div>
     </section>
   );
 }
