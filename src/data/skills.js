@@ -47,7 +47,7 @@ export default {
         new Skill({
             id: 6,
             title: "React JS",
-            rate: 3,
+            rate: 4,
             imgName: "react"
         }),
         new Skill({

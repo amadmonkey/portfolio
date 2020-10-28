@@ -181,7 +181,9 @@ function App() {
 	// scroll to
 	function doScrolling(duration, element) {
 		let startingY = window.pageYOffset
-		let elementY = window.pageYOffset + document.querySelector('#' + element.target.id + '_SECTION').getBoundingClientRect().top
+		let test = `#${element}_SECTION`;
+		debugger
+		let elementY = window.pageYOffset + document.querySelector(`#${element}_SECTION`).getBoundingClientRect().top
 		// If element is close to page's bottom then window will scroll only to some position above the element.
 		let targetY = document.body.scrollHeight - elementY < window.innerHeight ? document.body.scrollHeight - window.innerHeight : elementY
 		let diff = targetY - startingY
@@ -217,13 +219,19 @@ function App() {
 	// Apply event handlers. Example of firing the scrolling mechanism.
 	useEffect(() => {
 		
+		let urlArray = window.location.href.split('/');
+		let jumpTo = urlArray[urlArray.length-1];
+		if(jumpTo){
+			handleScroll(1000, `_${jumpTo.toUpperCase()}`);
+		}
+		
 		let nav = document.querySelector('#nav');
 		let quickLinks = document.querySelector('.quick-links');
 
 		function handleScroll(duration, element) {
-			let op = navList.filter(data => (data.id === element.target.classList.value));
+			let op = navList.filter(data => (data.id === (typeof element === 'object' ? element.target.classList.value : element)));
 			if (op.length) {
-				doScrolling(duration, element);
+				doScrolling(duration, op[0].id);
 			}
 		}
 
