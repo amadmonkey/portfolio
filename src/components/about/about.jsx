@@ -93,7 +93,7 @@ function About() {
               <header>Contact</header>
               <div className="about-item-content">
                 <button className="btn btn-lg btn-download">
-                  <a href="/resume.docx" target="_blank" download>
+                  <a href="/portfolio/resume_12092020.pdf" target="_blank" download>
                     <Download className="download-icon" />{" "}
                     <span>DOWNLOAD DOC</span>
                   </a>

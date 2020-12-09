@@ -44,19 +44,19 @@
         @include transition(0.5s ease-in-out);
         &.egg-yellow {
             background-color: $primary;
-            clip-path: ellipse(147% 72% at 91% 29%);
+            clip-path: ellipse(291% 70% at 91% 29%);
         }
         &.egg-purple {
             background-color: $secondary-dark;
-            clip-path: ellipse(167% 72% at 31% 28%);
+            clip-path: ellipse(167% 64% at 31% 28%)
         }
     }
     &.inactive {
         .egg.egg-yellow {
-            clip-path: ellipse(50% 27% at 98% 29%);
+            clip-path: ellipse(60% 26% at 98% 29%);
         }
         .egg.egg-purple {
-            clip-path: ellipse(79% 25% at 31% 28%);
+            clip-path: ellipse(100% 25% at 31% 28%);
         }
     }
 
