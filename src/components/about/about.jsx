@@ -95,7 +95,7 @@ function About() {
                                 <button className="btn btn-lg btn-download">
                                     <a href="https://github.com/amadmonkey/portfolio/raw/portfolio-2019/resume20210112.pdf" target="_blank" download>
                                         <Download className="download-icon" />{" "}
-                                        <span>DOWNLOAD DOC</span>
+                                        <span>DOWNLOAD RESUME</span>
                                     </a>
                                 </button>
                                 <button className="btn btn-lg btn-call">
