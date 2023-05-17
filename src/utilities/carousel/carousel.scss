@@ -148,18 +148,22 @@
             }
         }
     }
-    &.container-is-portrait {
-        .btn {
-            &.left { left: 18% }
-            &.right { right: 18% }
-        }   
-    }
-    &.container-is-landscape {
-        .btn {
-            &.left { left: 5% !important; }
-            &.right { right: 5% !important; }
-        }   
-    }
+    .btn {
+        &.left { left: 0 }
+        &.right { right: 0 }
+    }   
+    // &.container-is-portrait {
+    // .btn {
+    //     &.left { left: 0 }
+    //     &.right { right: 0 }
+    // }   
+    // }
+    // &.container-is-landscape {
+    //     .btn {
+    //         &.left { left: 5% !important; }
+    //         &.right { right: 5% !important; }
+    //     }   
+    // }
     .btn {
         z-index: 11;
         width: 55px;

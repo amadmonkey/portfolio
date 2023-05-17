@@ -51,23 +51,29 @@ const IllustrationCard = (props) => {
 
 
     useEffect(() => {
-        let timer = null;
+        let timer = null, timer2 = null;
         const handleKeyDown = (e) => {
             if (carouselIsReady) {
-                if (e.key === left) { // 
-                    setCarouselIsReady(false);
-                    HandlePrevious();
-                } else if (e.key === right) { // 
-                    setCarouselIsReady(false);
-                    HandleNext();
+                if(e.key === left || e.key === right){
+                    if (e.key === left) {
+                        setCarouselIsReady(false);
+                        HandlePrevious();
+                    } else if (e.key === right) {
+                        setCarouselIsReady(false);
+                        HandleNext();
+                    }
+                    const toAnimate = `.carousel-button.${e.key.toLowerCase()}`;
+                    document.querySelector(toAnimate).classList.add('active');
+                    timer = setTimeout(() => { setCarouselIsReady(true) }, 300);
+                    timer2 = setTimeout(() => { document.querySelector(toAnimate).classList.remove('active') }, 100);
                 }
-                timer = setTimeout(() => { setCarouselIsReady(true) }, 300);
             }
         }
         window.addEventListener('keydown', handleKeyDown);
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
             clearTimeout(timer);
+            clearTimeout(timer2);
         }
     })
 
@@ -85,8 +91,8 @@ const IllustrationCard = (props) => {
                     )
                 })}
             </div>
-            <button className="btn carousel-button left" onClick={(e) => HandlePrevious()}><Previous /></button>
-            <button className="btn carousel-button right" onClick={(e) => HandleNext()}><Next /></button>
+            <button className="btn carousel-button left arrowleft" onClick={(e) => HandlePrevious()}><Previous /></button>
+            <button className="btn carousel-button right arrowright" onClick={(e) => HandleNext()}><Next /></button>
             {/* <div className="carousel-description">
                 <h1 className="title">{images[activeImageIndex].title}</h1>
                 <p>{images[activeImageIndex].desc}</p>
