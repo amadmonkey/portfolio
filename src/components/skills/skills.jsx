@@ -5,7 +5,7 @@ import { ReactComponent as Html } from '../../img/html.svg';
 import { ReactComponent as Braces } from '../../img/brackets.svg';
 import './skills.scss';
 
-function Skills() {
+const Skills = () => {
     return (
         <section id="_SKILLS_SECTION" className="skills">
             <div className="content skills-content">

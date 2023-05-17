@@ -3,7 +3,7 @@ import './apps.scss';
 import AppsList from '../../data/apps.js';
 import AppCard from '../../utilities/app-card/app-card';
 
-function Apps() {
+const Apps = () => {
 
     return (
         <section id="_APPS_SECTION" className="apps">

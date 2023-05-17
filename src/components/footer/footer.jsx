@@ -2,7 +2,7 @@ import React from 'react';
 import NavList from '../../data/nav';
 import './footer.scss';
 
-function Footer() {
+const Footer = () => {
 
     var d = new Date();
 
@@ -10,8 +10,9 @@ function Footer() {
         <footer className="footer">
             <div className="content">
                 <ul className="quick-links">
-                    {NavList.nav.map((value, index) => {
-                        return <li key={index}><a id={value.id} className={value.id}>{value.title}</a></li>
+                    {NavList.nav.map((navItem, index) => {
+                        const { id, title, label, isEnabled } = navItem;
+                        return isEnabled && <li key={index}><button id={id} className={`${id} button-link`}>{label ? label : title}</button></li>
                     })}
                 </ul>
                 <p>

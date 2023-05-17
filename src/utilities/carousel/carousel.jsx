@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import './carousel.scss';
 import { ReactComponent as Previous } from '../../img/previous.svg';
 import { ReactComponent as Next } from '../../img/next.svg';
 
-function IllustrationCard(props) {
+import './carousel.scss';
+
+const IllustrationCard = (props) => {
     let images = props.images;
+    const left = "ArrowLeft", right = "ArrowRight";
     const [activeImageIndex, setActiveImageIndex] = useState(0);
     const [carouselIsReady, setCarouselIsReady] = useState(true);
     const [activeIndex, setActiveIndex] = useState({
@@ -45,7 +47,6 @@ function IllustrationCard(props) {
             tertiary2: (n + 2) >= (images.length) ? ((n + 2) - (images.length)) : (n + 2)
         });
         setActiveImageIndex(n);
-
     }
 
 
@@ -53,15 +54,14 @@ function IllustrationCard(props) {
         let timer = null;
         const handleKeyDown = (e) => {
             if (carouselIsReady) {
-                // if (top >= -400 && top <= 500) {
-                if (e.key === "ArrowLeft") { // 
+                if (e.key === left) { // 
                     setCarouselIsReady(false);
                     HandlePrevious();
-                } else if (e.key === "ArrowRight") { // 
+                } else if (e.key === right) { // 
                     setCarouselIsReady(false);
                     HandleNext();
                 }
-                timer = setTimeout(() => { setCarouselIsReady(true) }, 180);
+                timer = setTimeout(() => { setCarouselIsReady(true) }, 300);
             }
         }
         window.addEventListener('keydown', handleKeyDown);
@@ -85,12 +85,12 @@ function IllustrationCard(props) {
                     )
                 })}
             </div>
-            <button className="carousel-button left" onClick={(e) => HandlePrevious()}><Previous /></button>
-            <button className="carousel-button right" onClick={(e) => HandleNext()}><Next /></button>
-            <div className="carousel-description">
+            <button className="btn carousel-button left" onClick={(e) => HandlePrevious()}><Previous /></button>
+            <button className="btn carousel-button right" onClick={(e) => HandleNext()}><Next /></button>
+            {/* <div className="carousel-description">
                 <h1 className="title">{images[activeImageIndex].title}</h1>
                 <p>{images[activeImageIndex].desc}</p>
-            </div>
+            </div> */}
         </div>
     );
 

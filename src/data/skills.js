@@ -1,6 +1,5 @@
 class Skill {
-    // basePath = '/tech/';
-    basePath = '/portfolio/tech/';
+    basePath = `${process.env.NODE_ENV === 'development' ? '/portfolio' : ''}/tech/`
     constructor({ id = "", title = "", rate = "", imgName = "" }) {
         this.id = id;
         this.title = title;
@@ -12,7 +11,7 @@ class Skill {
     }
 }
 
-export default {
+const obj = {
     skills: [
         new Skill({
             id: 1,
@@ -100,3 +99,5 @@ export default {
         })
     ]
 };
+
+export default obj;

@@ -1,6 +1,5 @@
 class App {
-    // basePath = '/app-screenshots/';
-    basePath = '/portfolio/app-screenshots/';
+    basePath = `${process.env.NODE_ENV === 'development' ? '/portfolio' : ''}/app-screenshots/`
     constructor({ name = "", link = "", imgName = "", description = "", lastUpdated = "", tools = [] }) {
         this.name = name;
         this.link = link;
@@ -11,7 +10,7 @@ class App {
     }
 }
 
-export default {
+const obj = {
     apps: [
         new App({
             name: "Game Catalog Example",
@@ -55,3 +54,5 @@ export default {
         })
     ]
 };
+
+export default obj;

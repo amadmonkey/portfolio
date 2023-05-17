@@ -1,7 +1,7 @@
 @import "../../Variables.scss";
 
 .hero {
-    min-height: 700px;
+    min-height: 1000px;
     height: 100%;
     padding-top: 200px;
     position: relative;
@@ -11,16 +11,16 @@
         position: absolute;
         bottom: -102px;
         width: 100%;
-        height: 1000px;
+        height: 1500px;
         pointer-events: none;
         @include transition(0.5s ease-in-out);
         &.egg-yellow {
             background-color: $primary;
-            clip-path: ellipse(50% 27% at 5% 104%);
+            clip-path: ellipse(50% 21% at 5% 104%);
         }
         &.egg-purple {
             background-color: $secondary-dark;
-            clip-path: ellipse(82% 25% at 67% 104%);
+            clip-path: ellipse(85% 18% at 67% 104%);
         }
     }
     &.inactive {
@@ -74,6 +74,9 @@
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* IE10+/Edge */
         user-select: none; /* Standard */
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
         h1 {
             font-family: 'CarbonBlock', sans-serif;
             font-size: 85px;
@@ -90,6 +93,35 @@
             width: 300px;
             margin: 0 auto;
             line-height: 2;
+        }
+        .btn {
+            margin-top: 40px;
+            padding: 10px;
+            position: relative;
+            svg {
+                position: absolute;
+                left: 50px;
+                top: 17px;
+                height: 0;
+                width: 25.3px;
+                transition: 0.3s;
+                transform-origin: center;
+            }
+            span {
+                position: absolute;
+                left: 45%;
+                transform: translateX(-40%);
+                top: 20px;
+                transition: 0.2s;
+            }
+            &:hover {
+                svg {
+                    height: 30px;
+                }
+                span {
+                    transform: translateX(-30%);
+                }
+            }
         }
     }
 }

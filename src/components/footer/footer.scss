@@ -2,7 +2,7 @@
 
 .footer {
     position: relative;
-    margin-top: 300px;
+    margin-top: 400px;
     margin-bottom: 50px;
     height: 600px;
     text-align: center;
@@ -39,6 +39,8 @@
                 margin: 0;
                 padding: 0;
                 cursor: pointer;
+                border: none;
+                letter-spacing: 5px;
                 @include transition(0.5s);
                 &:hover {
                     color: $secondary-light;
@@ -48,7 +50,7 @@
                 &::after {
                     content: '|';
                     position: absolute;
-                    right: -40px;
+                    right: -60px;
                     top: 0;
                 }
             }

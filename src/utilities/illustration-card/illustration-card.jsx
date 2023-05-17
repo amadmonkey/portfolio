@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './illustration-card.scss';
 
-function IllustrationCard(props) {
+const IllustrationCard = (props) => {
     const [hasLoaded, setHasLoaded] = useState(false);
 
     const isImageLoaded = () => {

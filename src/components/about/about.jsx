@@ -5,7 +5,7 @@ import { ReactComponent as Email } from "../../img/email.svg";
 import ExperienceList from "../../data/experience.js";
 import "./about.scss";
 
-function About() {
+const About = () => {
     return (
         <section id="_ABOUT_SECTION" className="about">
             <div className="content about-content">
@@ -31,17 +31,21 @@ function About() {
                                             </h2>
                                             <span className="position">{value.position}</span>
                                             <span className="dates">{value.dates}</span>
-                                            <span className="tools-header">Tools:</span>
-                                            <ul>
-                                                {value.tools.map((value, index) => {
-                                                    return <li key={index}>{value}</li>;
-                                                })}
-                                            </ul>
+                                            <div className="tools-container">
+                                                <span className="tools-header">Tools used:</span>
+                                                <ul>
+                                                    {value.tools.map((value, index) => {
+                                                        return <li key={index}>{value}</li>;
+                                                    })}
+                                                </ul>
+                                            </div>
                                         </div>
                                     );
                                 })}
                             </div>
                         </div>
+                    </div>
+                    <div>
                         {/* EDUCATION */}
                         <div className="about-item">
                             <header>Education</header>
@@ -61,10 +65,8 @@ function About() {
                                 <h2>1996 - 2002</h2>
                             </div>
                         </div>
-                    </div>
-                    <div>
                         {/* AWARDS */}
-                        <div className="about-item">
+                        {/* <div className="about-item">
                             <header>Awards</header>
                             <div className="about-item-content awards">
                                 <h1>Developer Bootcamp</h1>
@@ -87,23 +89,23 @@ function About() {
                                 <h2>1st place</h2>
                                 <h2>Cavite State University - Imus Campus</h2>
                             </div>
-                        </div>
+                        </div> */}
                         {/* CONTACT */}
                         <div className="about-item">
                             <header>Contact</header>
                             <div className="about-item-content">
-                                <button className="btn btn-lg btn-download">
-                                    <a href="https://github.com/amadmonkey/portfolio/raw/portfolio-2019/resume20210112.pdf" target="_blank" download>
+                                <button className="btn btn-download">
+                                    <a href="https://github.com/amadmonkey/portfolio/raw/portfolio-2019/resume20210112.pdf" download>
                                         <Download className="download-icon" />{" "}
                                         <span>DOWNLOAD RESUME</span>
                                     </a>
                                 </button>
-                                <button className="btn btn-lg btn-call">
+                                <button className="btn btn-call">
                                     <a href="tel:916-552-3960">
                                         <Phone className="phone-icon" /> <span>09165523960</span>
                                     </a>
                                 </button>
-                                <button className="btn btn-lg btn-email">
+                                <button className="btn btn-email">
                                     <a href="mailto:aquinoarcie@gmail.com">
                                         <Email className="email-icon" />{" "}
                                         <span>SEND ME AN EMAIL</span>

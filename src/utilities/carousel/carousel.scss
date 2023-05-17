@@ -149,18 +149,18 @@
         }
     }
     &.container-is-portrait {
-        button {
+        .btn {
             &.left { left: 18% }
             &.right { right: 18% }
         }   
     }
     &.container-is-landscape {
-        button {
+        .btn {
             &.left { left: 5% !important; }
             &.right { right: 5% !important; }
         }   
     }
-    button {
+    .btn {
         z-index: 11;
         width: 55px;
         height: 55px;
@@ -211,7 +211,7 @@
         }
         p {
             font-size: 13px;
-            color: $teal;
+            color: $gray-light;
         }
         &.carousel-fade-in-move-up {
             opacity: 1;

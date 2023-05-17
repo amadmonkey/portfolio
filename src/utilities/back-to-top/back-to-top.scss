@@ -1,0 +1,55 @@
+@import "../../Variables.scss";
+
+.back-to-top {
+    font-family: 'Montserrat', sans-serif !important;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 2;
+    button, a {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: transparent;
+        border: 5px solid $primary;
+        border-radius: 200px;
+        transition: 0.1s;
+        padding: 10px;
+        box-shadow:
+            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            inset 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            inset 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+        > * {
+            pointer-events: none;
+        }
+        .up-svg {
+            min-width: 30px;
+            max-width: 50px;
+            width: 10vw;
+            fill: $primary;
+        }
+        span {
+            font-size: max(1vw, 20px);
+            line-height: max(1vw, 20px);
+            height: max(1vw, 20px);
+            width: 0;
+            margin: 0;
+            color: #FF9329;
+            overflow: hidden;
+            transition: 0.1s;
+        }
+        &:hover {
+            width: 210px;
+            .up-svg {
+                
+            }
+            span {
+                width: 100%;
+                padding-right: 10px;
+            }
+        }
+    }
+}

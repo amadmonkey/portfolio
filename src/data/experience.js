@@ -11,6 +11,19 @@ class Experience {
 export default {
     experience: [
         new Experience({
+            name: "Accenture, Inc.",
+            address: "Robinsons Cybergate Tower 2",
+            position: "Senior Analyst",
+            dates: "June 2021 - November 2022",
+            tools: [
+                "HTML, CSS",
+                "JavaScript",
+                "Angular 4+",
+                "AngularJS",
+                "SASS"
+            ]
+        }),
+        new Experience({
             name: "Security Bank Corporation",
             address: "Makati City",
             position: "AngularJS Develper",

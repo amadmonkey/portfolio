@@ -2,14 +2,14 @@ import React from 'react';
 import NavList from '../../data/nav';
 import './nav.scss';
 
-function Nav() {
+const Nav = () => {
     return (
         <nav id="nav">
             <ul>
-                {NavList.nav.map((value, index) => {
-                    // value.isShown && <li key={index}><span id={value.id + '_CLICK'}><button id={value.id} href="#" className={value.id}>{value.title}</button></span></li>
+                {NavList.nav.map((navItem, index) => {
+                    const {id, title, label, isShown, isEnabled} = navItem;
                     return (
-                        value.isShown && <li key={index}><span id={value.id + '_CLICK'}><a id={value.id} className={value.id}>{value.title}</a></span></li>
+                        isShown && isEnabled && <li key={index}><span id={id + '_CLICK'}><button id={id} className={id}>{label ? label : title}</button></span></li>
                     )
                 })}
             </ul>

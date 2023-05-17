@@ -2,7 +2,7 @@ import React from 'react';
 import SkillsList from '../../data/skills.js';
 import './app-card.scss';
 
-function AppCard(props) {
+const AppCard = (props) => {
     let tools = [];
     props.app.tools.forEach((value, index) => {
         let skills = SkillsList.skills;

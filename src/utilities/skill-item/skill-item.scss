@@ -1,59 +1,43 @@
 @import "../../Variables.scss";
 
 .skill-item {
-    position: relative;
-    display: inline-block;
+    display: inline-grid;
+    grid-template-columns: 1fr 7fr 4fr;
+    align-items: center;
     max-width: 420px;
     width: 100%;
     text-align: left;
     margin-bottom: 30px;
     color: $secondary-light;
     font-size: 14px;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
     &:nth-of-type(odd) {
         margin-right: 80px;
-        @include large {
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 30px;
-        }
     }
-    > * {
-        display: inline-block;
-        @include small {
-            display: block;
-            width: 100%;
-            text-align: center;
-        }
+    .skill-img {
+        width: 25px;
+        position: relative;
     }
     .title {
         line-height: 1.4;
     }
     .skill-rate-container {
-        position: absolute;
-        right: 0;
-        top: 8px;
-        @include small {
-            margin-bottom: 10px;
-        }
-        .skill-rate {
-            &:not(:first-child) {
-                margin-left: 13px;
-            }
-            display: inline-block;
-        }
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 140px;
     }
-    .skill-img {
-        width: 25px;
-        top: 6px;
-        margin-right: 10px;
-        position: relative;
+    @include medium {
+        &:nth-of-type(odd) {
+            margin-right: 0;
+        }
     }
     @include small {
-        margin-bottom: 60px !important;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        .skill-rate-container {
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
     }
 }
 

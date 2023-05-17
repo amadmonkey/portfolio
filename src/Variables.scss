@@ -20,14 +20,16 @@
 }
 
 // theme
-$teal: #C6EFEE;
+$gray-light: #C6EFEE;
 $primary: #FF9329;
 $secondary: #550F53;
 $secondary-light: #811E7E;
-$secondary-dark: #550F53; // override
 $secondary-dark: #340932;
-// $secondary-dark: #190318;
+$secondary-darker: #250224; // override
 $danger: #FF3939;
+$gray-light: #ebebeb;
+$gray-dark: #949494;
+$gray-darker: #525252;
 // lighter
 $rate-1: #45ef73;
 $rate-2: #b0ef39;

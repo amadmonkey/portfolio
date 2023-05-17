@@ -6,9 +6,9 @@ import Carousel from '../../utilities/carousel/carousel';
 import { ReactComponent as PencilLeft, ReactComponent as PencilRight } from '../../img/pencil.svg';
 import { ReactComponent as Ruler } from '../../img/ruler.svg';
 
-function Illustrations() {
+const Illustrations = () => {
     return (
-        <section id="_ART_SECTION" className="illustrations">
+        <section id="_ILLUSTRATIONS_SECTION" className="illustrations">
             <div className="content illustrations-content">
                 <div className="gallery">
                     {IllustrationsList.illustrations.map((value, index) => {

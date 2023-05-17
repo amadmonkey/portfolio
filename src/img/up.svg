@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 6 20 20" class="up-svg">
+    <defs>
+        <style>
+            .up-svg {
+                fill: #FF9329;
+                enable-background:new 0 0 512 512;
+            }
+        </style>
+    </defs>
+    <g>
+        <path d="M16.71 8.29a1 1 0 0 0-.33-.21 1 1 0 0 0-.76 0 1 1 0 0 0-.33.21l-4 4a1 1 0 0 0 1.42 1.42l2.29-2.3V23a1 1 0 0 0 2 0V11.41l2.29 2.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z" class=""></path>
+        <!-- <path d="M16 1a15 15 0 1 0 15 15A15 15 0 0 0 16 1zm0 28a13 13 0 1 1 13-13 13 13 0 0 1-13 13z" class=""></path> -->
+    </g>
+</svg>

@@ -1,6 +1,5 @@
 class Illustration {
-    // basePath = '/illustrations/';
-    basePath = '/portfolio/illustrations/';
+    basePath = `${process.env.NODE_ENV === 'development' ? '/portfolio' : ''}/illustrations/`
     constructor({ title = "", desc = "", isPortrait = true, dominantColor = "", imgName = "" }) {
         this.title = title;
         this.desc = desc;
@@ -14,7 +13,7 @@ class Illustration {
     }
 }
 
-export default {
+const obj = {
     illustrations: [
         new Illustration({
             title: "Flamingo Logo",
@@ -124,3 +123,5 @@ export default {
         })
     ]
 };
+
+export default obj;
