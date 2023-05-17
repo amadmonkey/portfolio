@@ -1,5 +1,5 @@
 class Illustration {
-    basePath = `${process.env.NODE_ENV === 'development' ? '/portfolio' : ''}/illustrations/`
+    basePath = `../portfolio/illustrations/`;
     constructor({ title = "", desc = "", isPortrait = true, dominantColor = "", imgName = "" }) {
         this.title = title;
         this.desc = desc;

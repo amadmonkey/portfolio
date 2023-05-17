@@ -1,5 +1,5 @@
 class Skill {
-    basePath = `${process.env.NODE_ENV === 'development' ? '/portfolio' : ''}/tech/`
+    basePath = `../portfolio/tech/`;
     constructor({ id = "", title = "", rate = "", imgName = "" }) {
         this.id = id;
         this.title = title;

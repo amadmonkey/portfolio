@@ -32,9 +32,9 @@
             fill: $primary;
         }
         span {
-            font-size: max(1vw, 20px);
-            line-height: max(1vw, 20px);
-            height: max(1vw, 20px);
+            font-size: calc(max(1vw, 20px));
+            line-height: calc(max(1vw, 20px));
+            height: calc(max(1vw, 20px));
             width: 0;
             margin: 0;
             color: #FF9329;

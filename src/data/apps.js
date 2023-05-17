@@ -1,5 +1,5 @@
 class App {
-    basePath = `${process.env.NODE_ENV === 'development' ? '/portfolio' : ''}/app-screenshots/`
+    basePath = `../portfolio/app-screenshots/`
     constructor({ name = "", link = "", imgName = "", description = "", lastUpdated = "", tools = [] }) {
         this.name = name;
         this.link = link;

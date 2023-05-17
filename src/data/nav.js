@@ -1,3 +1,4 @@
+import React from 'react';
 import Hero from '../components/hero/hero';
 import Apps from '../components/apps/apps';
 import Illustrations from '../components/illustrations/illustrations';
