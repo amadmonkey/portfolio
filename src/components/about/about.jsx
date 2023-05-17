@@ -14,7 +14,7 @@ const About = () => {
                     I like thinking of new ways to improve processes and make it easier for users to understand and navigate through applications.
                     Life's hard as it is why add to it? I love making applications fun to use.
                     I love creating algorithms and just simply try and make things work.
-        </p>
+                </p>
                 <div className="about-container">
                     <div>
                         {/* EXPERIENCE */}

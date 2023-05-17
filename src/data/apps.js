@@ -1,5 +1,5 @@
 class App {
-    basePath = `../portfolio/app-screenshots/`
+    basePath = `${process.env.REACT_APP_BASE_URL}app-screenshots/`;
     constructor({ name = "", link = "", imgName = "", description = "", lastUpdated = "", tools = [] }) {
         this.name = name;
         this.link = link;

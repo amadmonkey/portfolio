@@ -1,5 +1,5 @@
 class Skill {
-    basePath = `../portfolio/tech/`;
+    basePath = `${process.env.REACT_APP_BASE_URL}tech/`;
     constructor({ id = "", title = "", rate = "", imgName = "" }) {
         this.id = id;
         this.title = title;

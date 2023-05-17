@@ -1,7 +1,7 @@
 class Illustration {
-    basePath = `../portfolio/illustrations/`;
+    basePath = `${process.env.REACT_APP_BASE_URL}illustrations/`;
     constructor({ title = "", desc = "", isPortrait = true, dominantColor = "", imgName = "" }) {
-        this.title = title;
+    this.title = title;
         this.desc = desc;
         this.isPortrait = isPortrait;
         this.dominantColor = dominantColor;
