@@ -95,7 +95,7 @@ const About = () => {
                             <header>Contact</header>
                             <div className="about-item-content">
                                 <button className="btn btn-download">
-                                    <a href="https://github.com/amadmonkey/portfolio/raw/portfolio-2019/resume20210112.pdf" download>
+                                    <a href="https://docs.google.com/document/d/1aLYpKZIEethClyEmgjstThZ4tDD1GAZP/edit?usp=sharing&ouid=116576224972245876621&rtpof=true&sd=true" rel="noopener noreferrer" target="_blank">
                                         <Download className="download-icon" />{" "}
                                         <span>DOWNLOAD RESUME</span>
                                     </a>
