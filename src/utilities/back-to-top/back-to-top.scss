@@ -42,7 +42,8 @@
             transition: 0.1s;
         }
         &:hover {
-            width: 210px;
+            width: 100%;
+            max-width: 250px;
             .up-svg {
                 
             }

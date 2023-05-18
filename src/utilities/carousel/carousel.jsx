@@ -55,7 +55,7 @@ const IllustrationCard = (props) => {
         const listener = () => {
             const position = d.querySelector(`.${section}`).getBoundingClientRect().top;
             const isOn = position >= -100 && position <= 200;
-            if(!isOn){
+            if(!isOn && activeImageIndex !== 0){
                 MoveCarousel(0);
             }
         };
