@@ -7,6 +7,8 @@ import './carousel.scss';
 const IllustrationCard = (props) => {
     let images = props.images;
     const left = "ArrowLeft", right = "ArrowRight";
+    const d = document;
+    const section = "illustrations";
     const [activeImageIndex, setActiveImageIndex] = useState(0);
     const [carouselIsReady, setCarouselIsReady] = useState(true);
     const [activeIndex, setActiveIndex] = useState({
@@ -49,6 +51,20 @@ const IllustrationCard = (props) => {
         setActiveImageIndex(n);
     }
 
+    useEffect(() => {
+        const listener = () => {
+            const position = d.querySelector(`.${section}`).getBoundingClientRect().top;
+            const isOn = position >= -100 && position <= 200;
+            if(!isOn){
+                MoveCarousel(0);
+            }
+        };
+
+        d.addEventListener('scroll', listener);
+        return () => {
+            d.removeEventListener('scroll', listener);
+        }
+    })
 
     useEffect(() => {
         let timer = null, timer2 = null;

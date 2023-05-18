@@ -81,7 +81,7 @@ nav {
                 &:hover {
                     &:not(.active) {
                         button, .btn {
-                            letter-spacing: 10px;
+                            letter-spacing: 7px;
                             @include transition(0.2s);
                         }
                     }
