@@ -118,15 +118,6 @@ const App = () => {
 									}, (currentIndex * 200));
 								})
 							}
-							if(isOn.chess) {
-								const chessContainer = d.querySelector('.chess-content');
-								chessContainer.classList.remove('fade-out-move-down');
-								chessContainer.classList.add('fade-in-move-up');
-							} else {
-								const chessContainer = d.querySelector('.chess-content');
-								chessContainer.classList.remove('fade-in-move-up');
-								chessContainer.classList.add('fade-out-move-down');
-							}
 						}
 					} else {
 						nav.classList.add('hidden');
@@ -173,7 +164,7 @@ const App = () => {
 			backToTop.removeEventListener('click', UTILITIES.handleScroll);
 		}
 
-	}, [navList, d])
+	}, [navList])
 
 	return (
 		<div className="app">

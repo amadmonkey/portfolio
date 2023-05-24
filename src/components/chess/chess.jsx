@@ -8,8 +8,7 @@ const Chess = () => {
 	return (
 		<section id="_CHESS_SECTION" className="chess">
 			<div className="content chess-content">
-				{/* <iframe title="chess-app" src={url} name="iframe" height="1000" width="100%"></iframe> */}
-				<iframe title="chess-app" src={url} name="iframe" height="100%" width="100%" allow="clipboard-write"></iframe>
+				<iframe title="chess-app" src={url} name="iframe" height="100%" width="100%" allow="clipboard-write" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
 				<a href={url} target="_blank" rel="noopener noreferrer"><NewTab className="new-tab" /></a>
 			</div>
 		</section>
