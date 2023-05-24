@@ -1,0 +1,25 @@
+@import "../../Variables.scss";
+
+.chess {
+    position: relative;
+    margin-top: 400px;
+    margin-bottom: 300px;
+    text-align: center;
+    .chess-content {
+        position: relative;
+        transition: 0.3s;
+        height: 800px;
+        .new-tab {
+            position: absolute;
+            height: 30px;
+            right: 30px;
+            top: -30px;
+        }
+        @include medium {
+            height: 1200px;
+        }
+    }
+    iframe {
+        position: relative;
+    }
+}

@@ -12,12 +12,6 @@ const App = () => {
 	const navList = NavList.nav;
 	const d = document;
 	const sections = {}, position = {}, isOn = {}, navButtons = {};
-	const adjustment = {
-		hero: "0.5",
-		illustrations: "4.8",
-		skills: "3.5",
-		about: "1.7"
-	}
 	
 	useEffect(() => {
 		const listener = () => {
@@ -26,9 +20,9 @@ const App = () => {
 			const backToTop = d.querySelector('#_BACK_TO_TOP');
 			navList.forEach((navItem) => {
 				if(navItem.isEnabled){
-					const {id, title, isShown} = navItem;
+					const {id, title, isShown, adjustment} = navItem;
 					sections[title] = d.querySelector(`.${title}`);
-					position[title] = sections[title].getBoundingClientRect().top;
+					position[title] = sections[title.toLowerCase()].getBoundingClientRect().top;
 	
 					if(isShown) {
 						navButtons[title] = d.querySelector(`#${id}_CLICK`);
@@ -124,6 +118,15 @@ const App = () => {
 									}, (currentIndex * 200));
 								})
 							}
+							if(isOn.chess) {
+								const chessContainer = d.querySelector('.chess-content');
+								chessContainer.classList.remove('fade-out-move-down');
+								chessContainer.classList.add('fade-in-move-up');
+							} else {
+								const chessContainer = d.querySelector('.chess-content');
+								chessContainer.classList.remove('fade-in-move-up');
+								chessContainer.classList.add('fade-out-move-down');
+							}
 						}
 					} else {
 						nav.classList.add('hidden');
@@ -133,8 +136,8 @@ const App = () => {
 						})
 					}
 					// for eggs
-					const test = sections[title].clientHeight * adjustment[title];
-					if(yOffset > (sections[title].getBoundingClientRect().top + test)){
+					const totalAdjustment = sections[title].clientHeight * adjustment;
+					if(yOffset > (sections[title].getBoundingClientRect().top + totalAdjustment)){
 						sections[title].classList.add('inactive');
 					} else {
 						sections[title].classList.remove('inactive');

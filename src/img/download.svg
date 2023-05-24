@@ -1,1 +1,19 @@
-<svg id="1c15dae1-5f23-4bf0-bf7d-a37ffbd90f70" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206.33 244.74"><defs><style>.\39 1a5f541-3de9-4408-aa53-6eb829b34f2f{fill:#c6efee;stroke:#c6efee;stroke-linecap:round;stroke-miterlimit:10;stroke-width:40px;}</style></defs><title>Untitled-1</title><line class="91a5f541-3de9-4408-aa53-6eb829b34f2f" x1="20.6" y1="87.61" x2="103.33" y2="170.34"/><line class="91a5f541-3de9-4408-aa53-6eb829b34f2f" x1="103.6" y1="170.35" x2="186.33" y2="87.61"/><line class="91a5f541-3de9-4408-aa53-6eb829b34f2f" x1="102.74" y1="20" x2="102.74" y2="169.48"/><line class="91a5f541-3de9-4408-aa53-6eb829b34f2f" x1="185.75" y1="224.74" x2="20" y2="224.74"/></svg>
+<svg id="1c15dae1-5f23-4bf0-bf7d-a37ffbd90f70" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 206.33 244.74">
+    <defs>
+        <style>
+            .\39 1a5f541-3de9-4408-aa53-6eb829b34f2f {
+                fill: #c6efee;
+                stroke: #c6efee;
+                stroke-linecap: round;
+                stroke-miterlimit: 10;
+                stroke-width: 40px;
+            }
+        </style>
+    </defs>
+    <title>Untitled-1</title>
+    <line class="91a5f541-3de9-4408-aa53-6eb829b34f2f" x1="20.6" y1="87.61" x2="103.33" y2="170.34" />
+    <line class="91a5f541-3de9-4408-aa53-6eb829b34f2f" x1="103.6" y1="170.35" x2="186.33" y2="87.61" />
+    <line class="91a5f541-3de9-4408-aa53-6eb829b34f2f" x1="102.74" y1="20" x2="102.74" y2="169.48" />
+    <line class="91a5f541-3de9-4408-aa53-6eb829b34f2f" x1="185.75" y1="224.74" x2="20" y2="224.74" />
+</svg>

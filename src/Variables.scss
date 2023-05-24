@@ -20,14 +20,13 @@
 }
 
 // theme
-$gray-light: #C6EFEE;
+$gray-light: #f7f7f7;
 $primary: #FF9329;
 $secondary: #550F53;
 $secondary-light: #811E7E;
 $secondary-dark: #340932;
 $secondary-darker: #250224; // override
 $danger: #FF3939;
-$gray-light: #ebebeb;
 $gray-dark: #949494;
 $gray-darker: #525252;
 // lighter
@@ -56,6 +55,10 @@ $mdAbout: 680px;
 $sm: 480px;
 $smNav: 420px;
 $xs: 320px;
+
+.fill-secondary {
+    fill: $secondary-dark;
+}
 
 @mixin xLarge {
     @media (max-width: #{$xl}) {
