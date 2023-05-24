@@ -9,7 +9,7 @@ const Nav = () => {
                 {NavList.nav.map((navItem, index) => {
                     const {id, title, label, isShown, isEnabled} = navItem;
                     return (
-                        isShown && isEnabled && <li key={index}><span id={id + '_CLICK'}><button id={id} className={id}>{label ? label : title}</button></span></li>
+                        isShown && isEnabled && <li key={index}><span id={id + '_CLICK'}><button id={id} className={id}>{label ? label : title}</button><span class="sr-only">{label ? label : title}</span></span></li>
                     )
                 })}
             </ul>
