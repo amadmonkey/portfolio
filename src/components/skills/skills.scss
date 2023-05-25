@@ -47,22 +47,18 @@
         @include transition(0.5s ease-in-out);
         &.egg-yellow {
             background-color: $primary;
-            // clip-path: ellipse(50% 27% at 5% 104%);
             clip-path: ellipse(50% 27% at 5% 104%);
         }
         &.egg-purple {
             background-color: $secondary-dark;
-            // clip-path: ellipse(89% 55% at 62% 104%);
             clip-path: ellipse(79% 25% at 62% 104%);
         }
     }
     &.inactive {
         .egg.egg-yellow {
-            // clip-path: ellipse(50% 27% at 5% 104%);
             clip-path: ellipse(242% 103% at 5% 104%)
         }
         .egg.egg-purple {
-            // clip-path: ellipse(79% 25% at 62% 104%);
             clip-path: ellipse(109% 85% at 62% 104%);
         }
     }
@@ -79,7 +75,7 @@
         top: 0px;
         left: -70px;
         z-index: -1;
-        @include large {
+        @include xLarge {
             left: -500px;
         }
     }
@@ -89,7 +85,7 @@
         bottom: 120px;
         right: -40px;
         z-index: -1;
-        @include large {
+        @include xLarge {
             right: -500px;
         }
     }

@@ -15,7 +15,7 @@ const Hero = () => {
                 <h1><span className="capitalize">I</span>'m <span className="capitalize">A</span>rcie</h1>
                 <p>I do web development and I love doing it with <span>style</span></p>
                 <button className="btn btn-lg btn-ghost">
-                    <a href="https://docs.google.com/document/d/1aLYpKZIEethClyEmgjstThZ4tDD1GAZP/edit?usp=sharing&ouid=116576224972245876621&rtpof=true&sd=true" rel="noopener noreferrer" target="_blank">
+                    <a href="https://drive.google.com/file/d/1MQwrK-2m9astr0gJMsMgmKECbfAToZG3/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                         <Download className="download-icon" />
                         <span>Get Resume</span>
                     </a>

@@ -14,8 +14,10 @@ const SkillItem = (props) => {
 
     return (
         <div className="skill-item">
-            <img loading="lazy" className="skill-img" src={props.data.path.dark} alt={props.data.title} />
-            <span className="title">{props.data.title}</span>
+            <div>
+                <img loading="lazy" className="skill-img" src={props.data.path.dark} alt={props.data.title} />
+                <span className="title">{props.data.title}</span>
+            </div>
             <div className="skill-rate-container">
                 {generateRate()}
             </div>

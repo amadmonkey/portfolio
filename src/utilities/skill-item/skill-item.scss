@@ -1,9 +1,8 @@
 @import "../../Variables.scss";
 
 .skill-item {
-    display: inline-grid;
-    grid-template-columns: 1fr 7fr 4fr;
-    align-items: center;
+    display: inline-flex;
+    justify-content: space-between;
     max-width: 420px;
     width: 100%;
     text-align: left;
@@ -13,12 +12,18 @@
     &:nth-of-type(odd) {
         margin-right: 80px;
     }
-    .skill-img {
-        width: 25px;
-        position: relative;
-    }
-    .title {
-        line-height: 1.4;
+    > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        .skill-img {
+            width: 25px;
+            position: relative;
+        }
+        .title {
+            line-height: 1.4;
+        }
     }
     .skill-rate-container {
         display: flex;
@@ -32,8 +37,8 @@
         }
     }
     @include small {
-        grid-template-columns: 1fr;
-        justify-items: center;
+        flex-direction: column;
+        align-items: center;
         .skill-rate-container {
             margin-top: 5px;
             margin-bottom: 20px;
