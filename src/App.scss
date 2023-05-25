@@ -169,11 +169,15 @@ button {
     white-space: nowrap
 }
 
+
 .link {
     position: relative;
-    color: $secondary-light;
+    color: $secondary-light !important;
     cursor: pointer;
     @include transition(0.2s ease-in-out);
+    svg {
+        fill: $secondary-light !important;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -185,7 +189,7 @@ button {
         @include transition(0.2s ease-in-out);
     }
     &:hover {
-        color: $primary;
+        color: $primary !important;
         &-no-deco {
             &::before {
                 width: 98%;

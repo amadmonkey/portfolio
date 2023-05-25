@@ -99,6 +99,9 @@ nav {
             }
             &:last-child {
                 width: 30px;
+                &:hover {
+                    animation: wiggle 1.5s ease-in infinite;
+                }
             }
         }
         @include small {
